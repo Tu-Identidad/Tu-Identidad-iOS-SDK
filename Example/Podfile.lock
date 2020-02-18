@@ -1,0 +1,51 @@
+PODS:
+  - Alamofire (5.0.0-rc.3)
+  - Eureka (5.1.0)
+  - HandyJSON (5.0.1)
+  - JGProgressHUD (2.1)
+  - MBDocCapture (0.1.4)
+  - Nimble (8.0.5)
+  - Quick (2.2.0)
+  - Toast-Swift (5.0.1)
+  - TuIdentidadSDK (1.0.3):
+    - Alamofire (~> 5.0.0-rc.3)
+    - Eureka (~> 5.1.0)
+    - HandyJSON (~> 5.0.1)
+    - JGProgressHUD
+    - MBDocCapture (~> 0.1.4)
+    - Toast-Swift (~> 5.0.0)
+
+DEPENDENCIES:
+  - Nimble
+  - Quick
+  - TuIdentidadSDK (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Eureka
+    - HandyJSON
+    - JGProgressHUD
+    - MBDocCapture
+    - Nimble
+    - Quick
+    - Toast-Swift
+
+EXTERNAL SOURCES:
+  TuIdentidadSDK:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Alamofire: ca8c0de6906873be89d6deec5c8de279e00bf872
+  Eureka: 18a5076dcf0c41f9cd9748aa1c42f4d11434bdae
+  HandyJSON: d45b8415c501e3affc59ca9762c1197ff0feb646
+  JGProgressHUD: aa403e9a5b45cae98903c4600cccdd98c0c3ec90
+  MBDocCapture: 08165ce6f820559fd0280976c27a7e77d44f9760
+  Nimble: 4ab1aeb9b45553c75b9687196b0fa0713170a332
+  Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
+  TuIdentidadSDK: 7eabf0ada0b9f9cdbb905da5734f7b0757258e11
+
+PODFILE CHECKSUM: 3e5854b0052f1f72f62c0d1b72b3f60aee13c489
+
+COCOAPODS: 1.8.4

@@ -1,0 +1,6 @@
+framework module TuIdentidadSDK {
+  umbrella header "TuIdentidadSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

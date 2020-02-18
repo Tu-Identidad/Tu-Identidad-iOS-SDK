@@ -1,0 +1,6 @@
+framework module Pods_TuIdentidadSDK_Example {
+  umbrella header "Pods-TuIdentidadSDK_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
