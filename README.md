@@ -1,6 +1,6 @@
-# TuIdentidadSDK
+# TuIdentidad SDK for iOS
 
-[![CI Status](https://img.shields.io/travis/Aaron Munguia/TuIdentidadSDK.svg?style=flat)](https://travis-ci.org/Aaron Munguia/TuIdentidadSDK)
+[![CI Status](https://img.shields.io/travis/tu-identidad/tu-identidad-ios-sdk.svg?style=flat)](https://travis-ci.com/tu-identidad/tu-identidad-ios-sdk)
 [![Version](https://img.shields.io/cocoapods/v/TuIdentidadSDK.svg?style=flat)](https://cocoapods.org/pods/TuIdentidadSDK)
 [![License](https://img.shields.io/cocoapods/l/TuIdentidadSDK.svg?style=flat)](https://cocoapods.org/pods/TuIdentidadSDK)
 [![Platform](https://img.shields.io/cocoapods/p/TuIdentidadSDK.svg?style=flat)](https://cocoapods.org/pods/TuIdentidadSDK)
