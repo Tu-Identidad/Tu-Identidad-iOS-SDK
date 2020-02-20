@@ -9,7 +9,7 @@
 import UIKit
 import TuIdentidadSDK
 
-class ViewController: UITableViewController, IDAuthDelegate {
+class ViewController: UITableViewController, IDValidationDelegate {
         
     @IBOutlet weak var validateIdButton: UIButton!
     
@@ -96,4 +96,7 @@ class ViewController: UITableViewController, IDAuthDelegate {
         
     }
     
+    func error(response: String) {
+        debugPrint(response)
+    }
 }

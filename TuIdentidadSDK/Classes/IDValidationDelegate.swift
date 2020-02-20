@@ -1,6 +1,5 @@
 //
-//  IDAuthDelegate.swift
-//  IdAuth
+//  IDValidationDelegate.swift
 //
 //  Created by TuIdentidad on 09/12/19.
 //  Copyright © 2019 Alianza Corp. All rights reserved.
@@ -8,6 +7,8 @@
 
 import Foundation
 
-public protocol IDAuthDelegate {
+public protocol IDValidationDelegate {
     func getData(data: IDValidation)
+    
+    func error(response: String)
 }

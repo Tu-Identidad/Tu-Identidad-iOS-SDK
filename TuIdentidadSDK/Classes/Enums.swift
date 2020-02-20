@@ -23,6 +23,7 @@ public enum ProgressType{
     case INE_U_P
     case INE_D_P
     case INE_RESPONSE
+    case INE_RESPONSE_ERROR
     case THUMB_U_P
     case THUMB_D_P
     case THUMB_RESPONSE

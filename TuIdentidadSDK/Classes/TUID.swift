@@ -16,7 +16,7 @@ public class TUID: NSObject {
     }
     
     
-    open class func instantiateIDAuth(delegate: IDAuthDelegate, context: UIViewController, apikey: String, method: Methods, showResults: Bool){
+    open class func instantiateIDAuth(delegate: IDValidationDelegate, context: UIViewController, apikey: String, method: Methods, showResults: Bool){
         let tmpController = IDViewController()
         tmpController.delegate = delegate
         tmpController.apikey = apikey

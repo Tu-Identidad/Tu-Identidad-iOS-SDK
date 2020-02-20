@@ -33,7 +33,7 @@
 		0C4F18415DC10B01D4C0FF60A36D6809 /* SelectableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B5C4CD227DDBD76DC0C237D13E663C /* SelectableSection.swift */; };
 		0CC43FF0E31AA320ACFEB0FE6239DF34 /* ServerTrustEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A196A762B5E68979F61779A0061386D1 /* ServerTrustEvaluation.swift */; };
 		0DCCE84DF2E5C1E8ED3903A04E476D8D /* JGProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B4463B86C1535A3FA99E397B1A88BF81 /* JGProgressHUD.m */; };
-		0DF2EC8EEEBD74E1B83CBBB8772046EE /* IDAuthDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C2F9AAD3893FF4355D1FB838317571 /* IDAuthDelegate.swift */; };
+		0DF2EC8EEEBD74E1B83CBBB8772046EE /* IDValidationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C2F9AAD3893FF4355D1FB838317571 /* IDValidationDelegate.swift */; };
 		10693D69118D7F3DADCAE693FD2661B2 /* ButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9341367588F349F113BEA470275CE18 /* ButtonRow.swift */; };
 		108D42C90D0ED4F94A1C9ED029DCAA84 /* HandyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53957FE0C8D0CBB72CA2B62714170139 /* HandyJSON.framework */; };
 		1098AD30CA2D41905F95FAE488F0B92A /* JGProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 118A7AACEB088AC35F017F79DA00C11E /* JGProgressHUD.framework */; };
@@ -531,7 +531,7 @@
 		11955CDFE709068C3CBEBEC5AEC47F7D /* QuickSpec.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QuickSpec.m; path = Sources/QuickObjectiveC/QuickSpec.m; sourceTree = "<group>"; };
 		12232F5FD93A1ACF8F4887F4C06C40D8 /* Pods-TuIdentidadSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TuIdentidadSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
 		13793328BBA9D5BDEA4DAEE336C5444A /* enhance@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "enhance@2x.png"; path = "MBDocCapture/Assets/Icons/enhance/enhance@2x.png"; sourceTree = "<group>"; };
-		13C2F9AAD3893FF4355D1FB838317571 /* IDAuthDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IDAuthDelegate.swift; path = TuIdentidadSDK/Classes/IDAuthDelegate.swift; sourceTree = "<group>"; };
+		13C2F9AAD3893FF4355D1FB838317571 /* IDValidationDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IDValidationDelegate.swift; path = TuIdentidadSDK/Classes/IDValidationDelegate.swift; sourceTree = "<group>"; };
 		14649BAA500CECE4CE1DCCEED74D5F8F /* URLSessionConfiguration+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLSessionConfiguration+Alamofire.swift"; path = "Source/URLSessionConfiguration+Alamofire.swift"; sourceTree = "<group>"; };
 		14FF63D91CB1C77A7A6250FA1505AB99 /* JGProgressHUDSuccessIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDSuccessIndicatorView.h; path = JGProgressHUD/JGProgressHUD/include/JGProgressHUDSuccessIndicatorView.h; sourceTree = "<group>"; };
 		157EBADFBD6D5A80C0CDF32B2B7FCAD0 /* QCKDSL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QCKDSL.h; path = Sources/QuickObjectiveC/DSL/QCKDSL.h; sourceTree = "<group>"; };
@@ -1056,7 +1056,7 @@
 				ACDA6536C914891A68F23FB488A9AF1D /* Enums.swift */,
 				8AD7DCEC28A0171357F95AAD31385B33 /* Extensions.swift */,
 				8BED56F899B4199CAE1BFC9F022A07C2 /* IDAuth.swift */,
-				13C2F9AAD3893FF4355D1FB838317571 /* IDAuthDelegate.swift */,
+				13C2F9AAD3893FF4355D1FB838317571 /* IDValidationDelegate.swift */,
 				E82ED0005ACBB05287DC8FA63A32151E /* IDValidation.swift */,
 				A7527DB38203A871082879876F81234A /* IDViewController.swift */,
 				37A9903814E3CEE56A90C22FCA34C655 /* LauncherHelper.swift */,
@@ -2569,7 +2569,7 @@
 				A6232C4439D0EB1206053CC82646850B /* Enums.swift in Sources */,
 				3EA1BB512B3C222E820A086C9F936CB2 /* Extensions.swift in Sources */,
 				5E9633B8762DD3EC353959F39FA8573B /* IDAuth.swift in Sources */,
-				0DF2EC8EEEBD74E1B83CBBB8772046EE /* IDAuthDelegate.swift in Sources */,
+				0DF2EC8EEEBD74E1B83CBBB8772046EE /* IDValidationDelegate.swift in Sources */,
 				57D77BC271D817E2F1B708DEE7B7679D /* IDValidation.swift in Sources */,
 				10BFB323F165DA666009015A3126DF50 /* IDViewController.swift in Sources */,
 				4DBF4E1E4386E132B3A9CF5BD4DF6A85 /* LauncherHelper.swift in Sources */,

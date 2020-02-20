@@ -50,23 +50,31 @@ public class UploadHelper{
                     "type": ProgressType.INE_U_P,
                     "progress": p
                 ])
-                print("Upload Progress \(progress.fractionCompleted)")
+//                print("Upload Progress \(progress.fractionCompleted)")
             }.downloadProgress{ progress in
                 let p = progress.fractionCompleted
                 NotificationCenter.default.post(name: Notification.Name(self.u_r), object: self, userInfo: [
                     "type": ProgressType.INE_D_P,
                     "progress": p
                 ])
-                print("Downloand Progress \(progress.fractionCompleted)")
+//                print("Downloand Progress \(progress.fractionCompleted)")
+            }.responseDecodable { (response: AFDataResponse<IDValidation>) in
+                if let validation = response.value { NotificationCenter.default.post(name: Notification.Name(self.u_r), object: self, userInfo: [
+                        "type": ProgressType.INE_RESPONSE,
+                        "response": validation
+                    ])
+                }
             }.responseDecodable { (response: AFDataResponse<IDValidationResponse>) in
-                debugPrint("Response: \(String(describing: response.value))")
-//                if let mData = response.data {
-//                    let stringData = String(data: mData, encoding: String.Encoding.utf8)!
                 if let validation = response.value?.result { NotificationCenter.default.post(name: Notification.Name(self.u_r), object: self, userInfo: [
                         "type": ProgressType.INE_RESPONSE,
                         "response": validation
                     ])
                 }
+            }.response { response in
+                NotificationCenter.default.post(name: Notification.Name(self.u_r), object: self, userInfo: [
+                    "type": ProgressType.INE_RESPONSE_ERROR,
+                    "response": response.value as Any
+                ])
             }
         }
     }

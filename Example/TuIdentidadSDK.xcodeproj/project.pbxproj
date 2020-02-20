@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -504,14 +504,14 @@
 			baseConfigurationReference = 816424AEBBEEBF203822A6C7 /* Pods-TuIdentidadSDK_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4R5X6AN5D8;
+				DEVELOPMENT_TEAM = R8DB7M9284;
 				INFOPLIST_FILE = TuIdentidadSDK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tuidentidad.TuIdentidadSDK-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tuidentidad.TuIdentidadSDK-aamm";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
@@ -523,14 +523,14 @@
 			baseConfigurationReference = 34D78C4F385965E82E084BE2 /* Pods-TuIdentidadSDK_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4R5X6AN5D8;
+				DEVELOPMENT_TEAM = R8DB7M9284;
 				INFOPLIST_FILE = TuIdentidadSDK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tuidentidad.TuIdentidadSDK-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tuidentidad.TuIdentidadSDK-aamm";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
@@ -541,7 +541,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A0531212918B2DD3EF9D781A /* Pods-TuIdentidadSDK_Tests.debug.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = 4R5X6AN5D8;
+				DEVELOPMENT_TEAM = R8DB7M9284;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -568,7 +568,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0219F7FED5962C98E4C0F071 /* Pods-TuIdentidadSDK_Tests.release.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = 4R5X6AN5D8;
+				DEVELOPMENT_TEAM = R8DB7M9284;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",

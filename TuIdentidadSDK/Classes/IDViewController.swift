@@ -1,6 +1,5 @@
 //
 //  IDViewController.swift
-//  IdAuth
 //
 //  Created by TuIdentidad on 03/12/19.
 //  Copyright © 2019 Alianza Corp. All rights reserved.
@@ -12,7 +11,7 @@ import JGProgressHUD
 
 public class IDViewController: UIViewController, ImageScannerControllerDelegate {
     
-    var delegate: IDAuthDelegate?
+    var delegate: IDValidationDelegate?
     
     @IBOutlet weak var imgIneFront: UIButton!
     @IBOutlet weak var imgIneBack: UIButton!
@@ -86,6 +85,11 @@ public class IDViewController: UIViewController, ImageScannerControllerDelegate 
                         self.dismiss(animated: true, completion: nil)
                     }
                     break
+                case .INE_RESPONSE_ERROR:
+                    if let response = userinfo!["response"] as? String {
+                        delegate?.error(response: response)
+                        self.dismiss(animated: true, completion: nil)
+                    }
                 case .THUMB_U_P:
         
                     break
