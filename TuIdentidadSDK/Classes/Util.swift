@@ -19,11 +19,11 @@ public class Util{
         let data = image.pngData()
         
         if fileManager.createFile(atPath: imagepath, contents: data, attributes: nil){
-            print("save doc \(filename) succesfull")
+//            print("save doc \(filename) succesfull")
             return imagepath
         }
         
-        print("save doc \(filename) error")
+//        print("save doc \(filename) error")
         
         return nil
     }
@@ -50,9 +50,9 @@ public class Util{
         let imagepath = filename
         
         if fileManager.fileExists(atPath: imagepath){
-            print("file exists at \(imagepath)")
+//            print("file exists at \(imagepath)")
         }else{
-            print("there is no file for \(imagepath)")
+//            print("there is no file for \(imagepath)")
         }
         let url = URL.init(fileURLWithPath: imagepath)
         let data = try! Data.init(contentsOf: url, options: [.mappedIfSafe, .uncached])

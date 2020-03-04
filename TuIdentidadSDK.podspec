@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'TuIdentidadSDK'
-  s.version          = '1.0.3'
+  s.version          = '1.0.4'
   s.summary          = 'Official Tu Identidad SDK for iOS to access Tu Identidad Platform'
 
   s.description      = <<-DESC

@@ -49,8 +49,10 @@ class ViewController: UITableViewController, IDValidationDelegate {
     
     // MARK - IDAuthDelegate
     func getData(data: IDValidation) {
-        print(data)
-        if let ocrINE = data.tipoDE {
+        debugPrint(data.ineFront)
+        debugPrint(data.ineBack)
+        debugPrint(data)
+        if let ocrINE = data.validation.tipoDE {
             nameLabel.text = ocrINE.name
             firstLastnameLabel.text = ocrINE.firstlastname
             secondLastnameLabel.text = ocrINE.secondlastname
@@ -72,7 +74,7 @@ class ViewController: UITableViewController, IDValidationDelegate {
             expirationDateLabel.text = ocrINE.expDate
         }
         
-        if let ocrINE = data.tipoC {
+        if let ocrINE = data.validation.tipoC {
             nameLabel.text = ocrINE.name
             firstLastnameLabel.text = ocrINE.firstlastname
             secondLastnameLabel.text = ocrINE.secondlastname

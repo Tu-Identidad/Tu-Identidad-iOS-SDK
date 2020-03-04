@@ -58,14 +58,17 @@ public class UploadHelper{
                     "progress": p
                 ])
 //                print("Downloand Progress \(progress.fractionCompleted)")
-            }.responseDecodable { (response: AFDataResponse<IDValidation>) in
-                if let validation = response.value { NotificationCenter.default.post(name: Notification.Name(self.u_r), object: self, userInfo: [
+            }.responseDecodable { (response: AFDataResponse<IDValidationData>) in
+                if let validationData = response.value {
+                    let validation = IDValidation(validation: validationData, ineFront: ineFData, ineBack: ineBData)
+                    NotificationCenter.default.post(name: Notification.Name(self.u_r), object: self, userInfo: [
                         "type": ProgressType.INE_RESPONSE,
                         "response": validation
                     ])
                 }
             }.responseDecodable { (response: AFDataResponse<IDValidationResponse>) in
-                if let validation = response.value?.result { NotificationCenter.default.post(name: Notification.Name(self.u_r), object: self, userInfo: [
+                if let validation = response.value?.result {
+                    NotificationCenter.default.post(name: Notification.Name(self.u_r), object: self, userInfo: [
                         "type": ProgressType.INE_RESPONSE,
                         "response": validation
                     ])

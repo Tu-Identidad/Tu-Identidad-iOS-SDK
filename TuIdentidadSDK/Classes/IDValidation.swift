@@ -6,10 +6,22 @@
 //
 
 public class IDValidationResponse: Decodable {
-    public var result: IDValidation
+    public var result: IDValidationData
 }
 
-public class IDValidation: Decodable {
+public class IDValidation {
+    public var validation: IDValidationData
+    public var ineFront: Data
+    public var ineBack: Data
+    
+    init(validation: IDValidationData, ineFront: Data, ineBack: Data) {
+        self.validation = validation
+        self.ineFront = ineFront
+        self.ineBack = ineBack
+    }
+}
+
+public class IDValidationData: Decodable {
     
     public var infoCheck: String
     public var qualityCheck: String

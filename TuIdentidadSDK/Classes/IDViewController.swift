@@ -79,7 +79,7 @@ public class IDViewController: UIViewController, ImageScannerControllerDelegate 
                     self.view.stopHUD(hud: hud, afterDelay: 0.01)
                     if let response = userinfo!["response"] as? IDValidation {
                         if showResults {
-                            LauncherHelper().DisplayResults(sbName: "Main", sbIdentifier: "resultsID", userinfo: response.description, context: self)
+                            LauncherHelper().DisplayResults(sbName: "Main", sbIdentifier: "resultsID", userinfo: response.validation.description, context: self)
                         }
                         delegate?.getData(data: response)
                         self.dismiss(animated: true, completion: nil)
