@@ -19,6 +19,19 @@ public class IDValidation {
         self.ineFront = ineFront
         self.ineBack = ineBack
     }
+    
+}
+
+public class IDValidationINE {
+    public var validation: IDValidationINEResponse
+    public var ineFront: Data
+    public var ineBack: Data
+    
+    init(validation: IDValidationINEResponse, ineFront: Data, ineBack: Data) {
+        self.validation = validation
+        self.ineFront = ineFront
+        self.ineBack = ineBack
+    }
 }
 
 public class IDValidationData: Decodable {
@@ -93,4 +106,56 @@ public class TypeDE: Decodable {
     public var mz3: String
     
     public var expDate: String
+}
+
+// INE Validation Response 
+public class IDValidationINEResponse: Decodable {
+    public var valid: Bool
+    public var type: String
+    public var validations: IDValidationResult
+    public var front: IDSideResult
+    public var back: IDSideResult
+    public var data: IDINEData
+    public var warnings: [IDINEWarning]
+    
+    var description: String {
+        return ""
+    }
+}
+
+public class IDValidationResult: Decodable {
+    public var info: Bool!
+    public var quality: Bool!
+    public var curp: Bool!
+    public var pattern: Bool!
+}
+
+public class IDSideResult: Decodable {
+    public var focus: Bool!
+    public var glare: Bool!
+}
+
+public class IDINEData: Decodable {
+    public var name: String!
+    public var firstLastName: String!
+    public var secondLastName: String!
+    public var addressLine1: String!
+    public var addressLine2: String!
+    public var addressLine3: String!
+    public var electotalId: String!
+    public var curp: String!
+    public var dateOfBirth: String!
+    public var sex: String!
+    public var folio: String!
+    public var idNumber: String!
+    public var idMex: String!
+    public var mz1: String!
+    public var mz2: String!
+    public var mz3: String!
+    public var expirationDate: String!
+}
+
+public class IDINEWarning: Decodable {
+    public var code: String!
+    public var message: String!
 }

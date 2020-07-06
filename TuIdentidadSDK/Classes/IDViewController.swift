@@ -26,6 +26,7 @@ public class IDViewController: UIViewController, ImageScannerControllerDelegate 
     public var method: Methods!
     public var apikey: String!
     public var showResults: Bool! = true
+    public var validateOptions: IDValidateOptions!
    
     public init () {
         let bundle = Bundle(for: IDViewController.self)
@@ -82,6 +83,12 @@ public class IDViewController: UIViewController, ImageScannerControllerDelegate 
                             LauncherHelper().DisplayResults(sbName: "Main", sbIdentifier: "resultsID", userinfo: response.validation.description, context: self)
                         }
                         delegate?.getData(data: response)
+                        self.dismiss(animated: true, completion: nil)
+                    } else if let response = userinfo!["response"] as? IDValidationINE {
+                        if showResults {
+                            LauncherHelper().DisplayResults(sbName: "Main", sbIdentifier: "resultsID", userinfo: response.validation.description, context: self)
+                        }
+                        delegate?.getINEData(data: response)
                         self.dismiss(animated: true, completion: nil)
                     }
                     break

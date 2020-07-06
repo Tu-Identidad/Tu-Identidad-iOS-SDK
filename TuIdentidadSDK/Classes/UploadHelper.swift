@@ -29,7 +29,9 @@ public class UploadHelper{
         case .ONLYOCR:
             uri += Paths.prefix.ocr!
             break
-            
+        case .INE:
+            uri += Paths.prefix.ine!
+        break
         }
         
         let headers: HTTPHeaders = [
@@ -50,14 +52,20 @@ public class UploadHelper{
                     "type": ProgressType.INE_U_P,
                     "progress": p
                 ])
-//                print("Upload Progress \(progress.fractionCompleted)")
             }.downloadProgress{ progress in
                 let p = progress.fractionCompleted
                 NotificationCenter.default.post(name: Notification.Name(self.u_r), object: self, userInfo: [
                     "type": ProgressType.INE_D_P,
                     "progress": p
                 ])
-//                print("Downloand Progress \(progress.fractionCompleted)")
+            }.responseDecodable { (response: AFDataResponse<IDValidationINEResponse>) in
+                if let validationData = response.value {
+                    let validation = IDValidationINE(validation: validationData, ineFront: ineFData, ineBack: ineBData)
+                    NotificationCenter.default.post(name: Notification.Name(self.u_r), object: self, userInfo: [
+                        "type": ProgressType.INE_RESPONSE,
+                        "response": validation
+                    ])
+                }
             }.responseDecodable { (response: AFDataResponse<IDValidationData>) in
                 if let validationData = response.value {
                     let validation = IDValidation(validation: validationData, ineFront: ineFData, ineBack: ineBData)

@@ -17,6 +17,7 @@ public enum IneSide{
 public enum Methods{
     case IDVAL
     case ONLYOCR
+    case INE
 }
 
 public enum ProgressType{

@@ -44,7 +44,7 @@ class ViewController: UITableViewController, IDValidationDelegate {
     }
     
     @IBAction func didValidateIdTouchUpInside(_ sender: Any) {
-        TUID.instantiateIDAuth(delegate: self, context: self, apikey: "YourAPIKey", method: .IDVAL, showResults: false)
+        TUID.instantiateIDAuth(delegate: self, context: self, apikey: "vh2Q0pO4", method: .INE, showResults: false, validateOptions: IDValidateOptions(checkInfo: true, checkQuality: true, checkPatterns: true, checkCurp: true))
     }
     
     // MARK - IDAuthDelegate
@@ -96,6 +96,29 @@ class ViewController: UITableViewController, IDValidationDelegate {
             expirationDateLabel.text = "No present"
         }
         
+    }
+    
+    func getINEData(data: IDValidationINE) {
+        debugPrint(data)
+        nameLabel.text = data.validation.data.name
+//        firstLastnameLabel.text = ocrINE.firstlastname
+//        secondLastnameLabel.text = ocrINE.secondlastname
+//        
+//        addressLine1Label.text = ocrINE.addressline1
+//        addressLine2Label.text = ocrINE.addressline2
+//        addressLine3Label.text = ocrINE.addressline3
+//        
+//        sexLabel.text = ocrINE.sex
+//        birthdayLabel.text = ocrINE.dob
+//        yearsOldLabel.text = "No present"
+//        
+//        INEKeyLabel.text = ocrINE.claveElector
+//        folioLabel.text = "No present"
+//        registryNumberLabel.text = "No present"
+//        mz1Label.text = ocrINE.mz1
+//        mz2Label.text = ocrINE.mz2
+//        mz3Label.text = ocrINE.mz3
+//        expirationDateLabel.text = ocrINE.expDate
     }
     
     func error(response: String) {
