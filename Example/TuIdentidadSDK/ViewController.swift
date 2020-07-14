@@ -46,7 +46,7 @@ class ViewController: UITableViewController, IDValidationDelegate {
     }
     
     @IBAction func didValidateIdTouchUpInside(_ sender: Any) {
-        TUID.instantiateIDAuth(delegate: self, context: self, apikey: "vh2Q0pO4", method: .INE, showResults: false, validateOptions: IDValidateOptions(checkInfo: true, checkQuality: true, checkPatterns: true, checkCurp: true))
+        TUID.instantiateIDAuth(delegate: self, context: self, apikey: "Your-Api-Key", method: .INE, showResults: false, validateOptions: IDValidateOptions(checkInfo: true, checkQuality: true, checkPatterns: true, checkCurp: true))
     }
     
     // MARK - IDAuthDelegate
