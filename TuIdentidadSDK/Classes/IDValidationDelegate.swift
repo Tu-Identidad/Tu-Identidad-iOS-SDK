@@ -9,6 +9,6 @@ import Foundation
 
 public protocol IDValidationDelegate {
     func getData(data: IDValidation)
-    
+    func getINEData(data: IDValidationINE)
     func error(response: String)
 }

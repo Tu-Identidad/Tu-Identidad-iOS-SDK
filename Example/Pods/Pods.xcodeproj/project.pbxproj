@@ -230,6 +230,7 @@
 		95951126A0530AA12C587FAF50FD9497 /* PresenterRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBB04A004862A7271CE97CAD499FE8D /* PresenterRowType.swift */; };
 		95ACABC71585D657249CC92BA7731A8F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D195896AE976A4C0D96D605E9FA7D02 /* Foundation.framework */; };
 		96C369664F04EBEAB41792B9250C6E96 /* JGProgressHUDErrorIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 74076E508AE1CA921343560441A4E392 /* JGProgressHUDErrorIndicatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		978461F124AFE09B0086A679 /* IDValidateOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978461F024AFE09A0086A679 /* IDValidateOptions.swift */; };
 		97A168DFB6DB61770CE2DBF4FD39AA8D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A7884A73EC2D5023E7469441B68357 /* CFNetwork.framework */; };
 		98780764041BEA997A77724C06C8299C /* HeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D10FAEDDA7F2CA6E56390D074BC9CF2 /* HeaderFooterView.swift */; };
 		98F7DB48D9818E33C803CC35ABCEBF29 /* OptionsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B568932A98575B312020AC048844023B /* OptionsRow.swift */; };
@@ -739,6 +740,7 @@
 		958A15D2D14CD035A1B456A8066036C4 /* Pods_TuIdentidadSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TuIdentidadSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D6557B919C83F524E74CF7D8399D16 /* AlertRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlertRow.swift; path = Source/Rows/AlertRow.swift; sourceTree = "<group>"; };
 		976616A8AF0F62FB60FB891131D3C863 /* AnyExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyExtensions.swift; path = Source/AnyExtensions.swift; sourceTree = "<group>"; };
+		978461F024AFE09A0086A679 /* IDValidateOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IDValidateOptions.swift; path = TuIdentidadSDK/Classes/IDValidateOptions.swift; sourceTree = "<group>"; };
 		97A1994204D0499F78652D0B1523286C /* EnumTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EnumTransform.swift; path = Source/EnumTransform.swift; sourceTree = "<group>"; };
 		9805B74723DEAB64C03D64DD8C93DF8D /* JGProgressHUDFadeZoomAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDFadeZoomAnimation.h; path = JGProgressHUD/JGProgressHUD/include/JGProgressHUDFadeZoomAnimation.h; sourceTree = "<group>"; };
 		980ADD134C9C5931FB569516A61D07ED /* FieldsRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FieldsRow.swift; path = Source/Rows/FieldsRow.swift; sourceTree = "<group>"; };
@@ -1413,6 +1415,7 @@
 				82E0A0DADACBC4EBAE5C1ED31529AFCE /* IDAuth.swift */,
 				4211BB35B010B84CB43A5243EAE925C4 /* IDValidation.swift */,
 				2A512338EEDD26F7D14C7FB7EE03F982 /* IDValidationDelegate.swift */,
+				978461F024AFE09A0086A679 /* IDValidateOptions.swift */,
 				C7808F6C07CD522D7CB7DCE2A4E85342 /* IDViewController.swift */,
 				A6FD8787D01370EA344E8C13D81985BB /* LauncherHelper.swift */,
 				6C0F7F08C46E770D87491EB5D84356D3 /* Paths.swift */,
@@ -2075,7 +2078,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1150;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -2578,6 +2581,7 @@
 				814BABD89D472C4AE4542E7783484D15 /* svUploader.swift in Sources */,
 				922061A2BB33E64F4FCE993B293D7101 /* TUID.swift in Sources */,
 				F0D421A4F74EFC7BA6DE4E38EF36F9BA /* TuIdentidadSDK-dummy.m in Sources */,
+				978461F124AFE09B0086A679 /* IDValidateOptions.swift in Sources */,
 				E8E35ECE5513CEFFCDC90EBB006FD83C /* UploadHelper.swift in Sources */,
 				F93599C07B6683E961DBF27D3FFE9082 /* Util.swift in Sources */,
 			);
@@ -2926,6 +2930,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -3456,6 +3461,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -3505,7 +3511,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
