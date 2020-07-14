@@ -29,7 +29,7 @@ Validation Services:
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
   s.dependency 'Alamofire', '~> 5.0.0-rc.3'
-  s.dependency 'Eureka', '~> 5.1.0'
+#  s.dependency 'Eureka', '~> 5.1.0'
   s.dependency 'HandyJSON', '~> 5.0.1'
   s.dependency 'JGProgressHUD'
   s.dependency 'MBDocCapture', '~> 0.1.4'
