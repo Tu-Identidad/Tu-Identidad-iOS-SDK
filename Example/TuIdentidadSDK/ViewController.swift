@@ -24,9 +24,11 @@ class ViewController: UITableViewController, IDValidationDelegate {
     @IBOutlet weak var sexLabel: UILabel!
     @IBOutlet weak var birthdayLabel: UILabel!
     @IBOutlet weak var yearsOldLabel: UILabel!
+    @IBOutlet weak var curpLabel: UILabel!
     
     @IBOutlet weak var INEKeyLabel: UILabel!
     @IBOutlet weak var folioLabel: UILabel!
+    @IBOutlet weak var idmexLabel: UILabel!
     @IBOutlet weak var registryNumberLabel: UILabel!
     @IBOutlet weak var mz1Label: UILabel!
     @IBOutlet weak var mz2Label: UILabel!
@@ -44,7 +46,7 @@ class ViewController: UITableViewController, IDValidationDelegate {
     }
     
     @IBAction func didValidateIdTouchUpInside(_ sender: Any) {
-        TUID.instantiateIDAuth(delegate: self, context: self, apikey: "YourAPIKey", method: .IDVAL, showResults: false)
+        TUID.instantiateIDAuth(delegate: self, context: self, apikey: "Your-Api-Key", method: .INE, showResults: false, validateOptions: IDValidateOptions(checkInfo: true, checkQuality: true, checkPatterns: true, checkCurp: true))
     }
     
     // MARK - IDAuthDelegate
@@ -98,7 +100,32 @@ class ViewController: UITableViewController, IDValidationDelegate {
         
     }
     
+    func getINEData(data: IDValidationINE) {
+        debugPrint(data)
+        nameLabel.text = data.validation.data.name
+        firstLastnameLabel.text = data.validation.data.firstLastName
+        secondLastnameLabel.text = data.validation.data.secondLastName
+        
+        addressLine1Label.text = data.validation.data.addressLine1
+        addressLine2Label.text = data.validation.data.addressLine2
+        addressLine3Label.text = data.validation.data.addressLine3
+        
+        sexLabel.text = data.validation.data.sex
+        birthdayLabel.text = data.validation.data.dateOfBirth
+        yearsOldLabel.text = "deprecated"
+        curpLabel.text = data.validation.data.curp
+        
+        INEKeyLabel.text = data.validation.data.electoralId
+        folioLabel.text = data.validation.data.folio
+        idmexLabel.text = data.validation.data.idMex
+        registryNumberLabel.text = data.validation.data.idNumber
+        mz1Label.text = data.validation.data.mz1
+        mz2Label.text = data.validation.data.mz2
+        mz3Label.text = data.validation.data.mz3
+        expirationDateLabel.text = data.validation.data.expirationDate
+    }
+    
     func error(response: String) {
-        debugPrint(response)
+        print(response)
     }
 }

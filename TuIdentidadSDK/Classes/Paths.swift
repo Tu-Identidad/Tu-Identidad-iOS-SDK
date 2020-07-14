@@ -18,5 +18,6 @@ public class Paths : NSObject{
         public static let auth:String? = "api/business/idval"
         public static let ocr:String? = "api/business/onlyocr"
         public static let analize:String? = "api/business/analizedocument"
+        public static let ine:String? = "api/business/ine"
     }
 }

@@ -7,7 +7,7 @@ PODS:
   - Nimble (8.0.5)
   - Quick (2.2.0)
   - Toast-Swift (5.0.1)
-  - TuIdentidadSDK (1.0.3):
+  - TuIdentidadSDK (1.0.4):
     - Alamofire (~> 5.0.0-rc.3)
     - Eureka (~> 5.1.0)
     - HandyJSON (~> 5.0.1)
@@ -44,7 +44,7 @@ SPEC CHECKSUMS:
   Nimble: 4ab1aeb9b45553c75b9687196b0fa0713170a332
   Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
-  TuIdentidadSDK: 7eabf0ada0b9f9cdbb905da5734f7b0757258e11
+  TuIdentidadSDK: b0ed1ca3cd40069f80aac491ad507aa70b5c7eda
 
 PODFILE CHECKSUM: 3e5854b0052f1f72f62c0d1b72b3f60aee13c489
 
