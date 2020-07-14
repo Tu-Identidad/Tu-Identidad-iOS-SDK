@@ -142,7 +142,7 @@ public class IDINEData: Decodable {
     public var addressLine1: String!
     public var addressLine2: String!
     public var addressLine3: String!
-    public var electotalId: String!
+    public var electoralId: String!
     public var curp: String!
     public var dateOfBirth: String!
     public var sex: String!

@@ -79,24 +79,25 @@ public class IDViewController: UIViewController, ImageScannerControllerDelegate 
                 case .INE_RESPONSE:
                     self.view.stopHUD(hud: hud, afterDelay: 0.01)
                     if let response = userinfo!["response"] as? IDValidation {
-                        if showResults {
-                            LauncherHelper().DisplayResults(sbName: "Main", sbIdentifier: "resultsID", userinfo: response.validation.description, context: self)
-                        }
+//                        if showResults {
+//                            LauncherHelper().DisplayResults(sbName: "Main", sbIdentifier: "resultsID", userinfo: response.validation.description, context: self)
+//                        }
                         delegate?.getData(data: response)
-                        self.dismiss(animated: true, completion: nil)
                     } else if let response = userinfo!["response"] as? IDValidationINE {
-                        if showResults {
-                            LauncherHelper().DisplayResults(sbName: "Main", sbIdentifier: "resultsID", userinfo: response.validation.description, context: self)
-                        }
+//                        if showResults {
+//                            LauncherHelper().DisplayResults(sbName: "Main", sbIdentifier: "resultsID", userinfo: response.validation.description, context: self)
+//                        }
                         delegate?.getINEData(data: response)
-                        self.dismiss(animated: true, completion: nil)
+                        
                     }
+                    self.dismiss(animated: true, completion: nil)
                     break
                 case .INE_RESPONSE_ERROR:
+                    self.view.stopHUD(hud: hud, afterDelay: 0.01)
                     if let response = userinfo!["response"] as? String {
                         delegate?.error(response: response)
-                        self.dismiss(animated: true, completion: nil)
                     }
+                    self.dismiss(animated: true, completion: nil)
                 case .THUMB_U_P:
         
                     break
