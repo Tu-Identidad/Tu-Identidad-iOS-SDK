@@ -7,9 +7,9 @@
 //
 import Foundation
 import UIKit
-import Eureka
+//import Eureka
 
-public class ResultsViewController: FormViewController{
+public class ResultsViewController: UIViewController{
     
     public var results: String?
     
@@ -23,7 +23,7 @@ public class ResultsViewController: FormViewController{
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        
+        /*
         if #available(iOS 13.0, *) {
             overrideUserInterfaceStyle = .light
             tableView.backgroundColor = UIColor(cgColor: CGColor(srgbRed: CGFloat(255), green: CGFloat(255), blue: CGFloat(255), alpha: CGFloat(1)))
@@ -153,6 +153,7 @@ public class ResultsViewController: FormViewController{
             tableView.isHidden = true
             self.view.sendSubviewToBack(tableView)
         }
+        */
     }
     
     public override func didReceiveMemoryWarning() {

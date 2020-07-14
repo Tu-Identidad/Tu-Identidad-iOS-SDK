@@ -1,15 +1,13 @@
 PODS:
-  - Alamofire (5.0.0-rc.3)
-  - Eureka (5.1.0)
-  - HandyJSON (5.0.1)
+  - Alamofire (5.0.5)
+  - HandyJSON (5.0.2)
   - JGProgressHUD (2.1)
   - MBDocCapture (0.1.4)
-  - Nimble (8.0.5)
-  - Quick (2.2.0)
+  - Nimble (8.1.1)
+  - Quick (3.0.0)
   - Toast-Swift (5.0.1)
-  - TuIdentidadSDK (1.0.4):
+  - TuIdentidadSDK (1.1.4):
     - Alamofire (~> 5.0.0-rc.3)
-    - Eureka (~> 5.1.0)
     - HandyJSON (~> 5.0.1)
     - JGProgressHUD
     - MBDocCapture (~> 0.1.4)
@@ -23,7 +21,6 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
-    - Eureka
     - HandyJSON
     - JGProgressHUD
     - MBDocCapture
@@ -36,16 +33,15 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Alamofire: ca8c0de6906873be89d6deec5c8de279e00bf872
-  Eureka: 18a5076dcf0c41f9cd9748aa1c42f4d11434bdae
-  HandyJSON: d45b8415c501e3affc59ca9762c1197ff0feb646
+  Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
+  HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   JGProgressHUD: aa403e9a5b45cae98903c4600cccdd98c0c3ec90
   MBDocCapture: 08165ce6f820559fd0280976c27a7e77d44f9760
-  Nimble: 4ab1aeb9b45553c75b9687196b0fa0713170a332
-  Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
+  Nimble: 5f8a2fb6fa343a7242dfdd9d42f7267419d464b2
+  Quick: 6d9559f40647bc4d510103842ef2fdd882d753e2
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
-  TuIdentidadSDK: b0ed1ca3cd40069f80aac491ad507aa70b5c7eda
+  TuIdentidadSDK: 1318ee15db5eb86e8ee42a0f67b76bfcf984f767
 
 PODFILE CHECKSUM: 3e5854b0052f1f72f62c0d1b72b3f60aee13c489
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.3
