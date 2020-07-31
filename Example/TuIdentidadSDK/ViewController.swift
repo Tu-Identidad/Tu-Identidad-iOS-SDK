@@ -126,6 +126,7 @@ class ViewController: UITableViewController, IDValidationDelegate {
     }
     
     func error(response: String) {
+        print("On Error response")
         print(response)
     }
 }

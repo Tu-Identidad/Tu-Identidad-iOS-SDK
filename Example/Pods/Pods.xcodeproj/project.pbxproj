@@ -181,6 +181,15 @@
 		94DA3131D64B3D904BE28E72F1871065 /* BeAKindOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45870F9509EF6A77968F44EA24D95F2 /* BeAKindOf.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		95ACABC71585D657249CC92BA7731A8F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E9FD5ACC945D1942889FB8E489BC57 /* Foundation.framework */; };
 		96C369664F04EBEAB41792B9250C6E96 /* JGProgressHUDErrorIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C2B40B25CE0B5D96C87613937D4ACED /* JGProgressHUDErrorIndicatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9769916924CE8FAD0009B867 /* IDAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9769916824CE8FAD0009B867 /* IDAddressViewController.swift */; };
+		9769917224CF548C0009B867 /* IDAddressDocumentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9769917124CF548C0009B867 /* IDAddressDocumentDelegate.swift */; };
+		9769917624CF90560009B867 /* IDAddressDocumentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9769917524CF90560009B867 /* IDAddressDocumentResponse.swift */; };
+		9769917824CF99350009B867 /* IDErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9769917724CF99350009B867 /* IDErrorResponse.swift */; };
+		97867F0B24D0B88500AE7A6F /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97867F0A24D0B88500AE7A6F /* Media.xcassets */; };
+		97867F0C24D0B88500AE7A6F /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97867F0A24D0B88500AE7A6F /* Media.xcassets */; };
+		97867F1A24D3927400AE7A6F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97867F1C24D3927400AE7A6F /* Localizable.strings */; };
+		97867F2424D3983C00AE7A6F /* IDAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97867F2324D3983C00AE7A6F /* IDAddressViewController.xib */; };
+		97867F2524D39CDB00AE7A6F /* IDAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97867F2324D3983C00AE7A6F /* IDAddressViewController.xib */; };
 		97A168DFB6DB61770CE2DBF4FD39AA8D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4658337BE59B8D9F75CAF14B20FF9317 /* CFNetwork.framework */; };
 		99A1378F4758867783A9F5F8519CFAFC /* JGProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F97A9C3CC6B4E089787AF679BFDB55 /* JGProgressHUD-dummy.m */; };
 		99E8019F4689A514DAC6AA40AFF7352E /* NMBObjCMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F04EF19CB622445605101232CFFB0B /* NMBObjCMatcher.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -625,6 +634,14 @@
 		959535CC838CB1574788E205B4EE9C34 /* CustomDateFormatTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomDateFormatTransform.swift; path = Source/CustomDateFormatTransform.swift; sourceTree = "<group>"; };
 		9617FA6BAE34E5A53DD855A86D5F7E8A /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = MBDocCapture/Classes/Common/Error.swift; sourceTree = "<group>"; };
 		971240947808E2BD6BB76C3DB8202D66 /* Filter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = Sources/Quick/Filter.swift; sourceTree = "<group>"; };
+		9769916824CE8FAD0009B867 /* IDAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDAddressViewController.swift; sourceTree = "<group>"; };
+		9769917124CF548C0009B867 /* IDAddressDocumentDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDAddressDocumentDelegate.swift; sourceTree = "<group>"; };
+		9769917524CF90560009B867 /* IDAddressDocumentResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDAddressDocumentResponse.swift; sourceTree = "<group>"; };
+		9769917724CF99350009B867 /* IDErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDErrorResponse.swift; sourceTree = "<group>"; };
+		97867F0A24D0B88500AE7A6F /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		97867F1B24D3927400AE7A6F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		97867F1D24D3929800AE7A6F /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		97867F2324D3983C00AE7A6F /* IDAddressViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IDAddressViewController.xib; sourceTree = "<group>"; };
 		97B4F226636A5550A2D11901135E4885 /* QuickConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuickConfiguration.swift; path = Sources/Quick/Configuration/QuickConfiguration.swift; sourceTree = "<group>"; };
 		9812919D3D5D5B109B3DADC6C2072778 /* TuIdentidadSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TuIdentidadSDK-umbrella.h"; sourceTree = "<group>"; };
 		984D101A10EB375D04BAFBF8CD39DCA6 /* QuickSpecBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QuickSpecBase.h; path = Sources/QuickObjCRuntime/include/QuickSpecBase.h; sourceTree = "<group>"; };
@@ -1277,13 +1294,28 @@
 				EEE0E8E3C4A76E398A4B29A029B74A89 /* inefront.png */,
 				F51BA82280B6D38C3611C829E8BC0880 /* ResultsViewController.xib */,
 				C96C85BD7695C72DF467EBAA5025524D /* tuidentidadletras.png */,
+				97867F0A24D0B88500AE7A6F /* Media.xcassets */,
+				97867F1C24D3927400AE7A6F /* Localizable.strings */,
+				97867F2324D3983C00AE7A6F /* IDAddressViewController.xib */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		9769916724CE698F0009B867 /* AddressKit */ = {
+			isa = PBXGroup;
+			children = (
+				9769917524CF90560009B867 /* IDAddressDocumentResponse.swift */,
+				9769916824CE8FAD0009B867 /* IDAddressViewController.swift */,
+				9769917124CF548C0009B867 /* IDAddressDocumentDelegate.swift */,
+				9769917724CF99350009B867 /* IDErrorResponse.swift */,
+			);
+			path = AddressKit;
 			sourceTree = "<group>";
 		};
 		99AB3C1F64F382C6C4C7B082AD6E11F0 /* TuIdentidadSDK */ = {
 			isa = PBXGroup;
 			children = (
+				9769916724CE698F0009B867 /* AddressKit */,
 				65F48C1D65E16817D7DB45D774833DD3 /* Enums.swift */,
 				BD44C59C713A4EA64AB332A41BFFA8CD /* Extensions.swift */,
 				9F826816C88A43A975C4EA0BFE8853C9 /* IDAuth.swift */,
@@ -1808,6 +1840,7 @@
 				en,
 				Base,
 				fr,
+				"es-419",
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = 87755365B4182A8F4FA3277506B4FB8E /* Products */;
@@ -1855,11 +1888,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97867F0C24D0B88500AE7A6F /* Media.xcassets in Resources */,
 				C6D8A401AACE594EED19F76FB1C23F8C /* arrow_left.png in Resources */,
 				4AF68FB372A4057EE853DA295BFCC38F /* ic_logo.png in Resources */,
 				50ECE6DABA7E4FA586D994EC28A3E554 /* IDViewController.xib in Resources */,
 				E82FCDECCF3BA627FF26F65D40D0006D /* ine_bg.png in Resources */,
 				5120F119031068A06A87B151F2F66628 /* ineback.png in Resources */,
+				97867F2524D39CDB00AE7A6F /* IDAddressViewController.xib in Resources */,
 				BF43DC723333226D297162522C04AEE7 /* inefront.png in Resources */,
 				594BF5EC53A3BB35CD058EA915E1928A /* ResultsViewController.xib in Resources */,
 				22CC6201B3987F74C2466C3EC09E0266 /* tuidentidadletras.png in Resources */,
@@ -1920,6 +1955,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97867F2424D3983C00AE7A6F /* IDAddressViewController.xib in Resources */,
+				97867F0B24D0B88500AE7A6F /* Media.xcassets in Resources */,
+				97867F1A24D3927400AE7A6F /* Localizable.strings in Resources */,
 				15F63F8CDB8F0D0DE8102D59DEFCB189 /* TuIdentidadSDK.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2067,12 +2105,16 @@
 				4B7EC105ED71CAADB2A79FD7F65076BA /* IDValidationDelegate.swift in Sources */,
 				41DC64FDF43BE7FEA4E81F165E340BB8 /* IDViewController.swift in Sources */,
 				C8CD809AFB00248B60AEBEDFAE960272 /* LauncherHelper.swift in Sources */,
+				9769917224CF548C0009B867 /* IDAddressDocumentDelegate.swift in Sources */,
+				9769917624CF90560009B867 /* IDAddressDocumentResponse.swift in Sources */,
 				5E5378B0F07B1866E42ABDF0231DB144 /* Paths.swift in Sources */,
 				102606166AAA3951CCE5DDB2C4BD0DE4 /* ResultsViewController.swift in Sources */,
+				9769916924CE8FAD0009B867 /* IDAddressViewController.swift in Sources */,
 				5B7FF247E5BA3B47CE48C0B2998EAF63 /* svUploader.swift in Sources */,
 				AE47F3ABE7A2E33429102C28E6A80FE3 /* TUID.swift in Sources */,
 				80043708DE1AA96F74C3CCD9BCF7E5E4 /* TuIdentidadSDK-dummy.m in Sources */,
 				EBE2508A0D82A8C4C086FDD3968167D6 /* UploadHelper.swift in Sources */,
+				9769917824CF99350009B867 /* IDErrorResponse.swift in Sources */,
 				209053702E650ABE0C6E2C5A26245788 /* Util.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2321,6 +2363,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		97867F1C24D3927400AE7A6F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97867F1B24D3927400AE7A6F /* en */,
+				97867F1D24D3929800AE7A6F /* es-419 */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		FB84D818298CB8442D3BCE13F0A4F130 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

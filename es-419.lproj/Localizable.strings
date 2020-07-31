@@ -5,3 +5,8 @@
   Created by Aaron Munguia on 30/07/20.
   
 */
+"tuidentidadsdk.alert_title" = "Validación de documento";
+
+"tuidentidadsdk.alert_message" = "Escanea un documento para realizar la validación.";
+
+"tuidentidadsdk.alert_ok_button" = "Aceptar";

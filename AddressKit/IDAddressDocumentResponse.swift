@@ -6,8 +6,9 @@
 //
 
 public class IDAddressDocumentResponse: Decodable {
-    public var validity: Bool
+    public var valid: Bool
     public var data: IDAddressDocumentData
+    public var warnings: [IDErrorResponse]
 }
 
 public class IDAddressDocumentData: Decodable {
@@ -16,6 +17,11 @@ public class IDAddressDocumentData: Decodable {
     public var addressline2: String
     public var addressline3: String
     public var addressline4: String
-    
     public var totalPayment: Decimal
+    public var period: String
+    public var serviceNumber: String
+    public var paymentDeadline: String
+    public var geocodeUrl: String?
+    public var lat: Decimal
+    public var lng: Decimal
 }
