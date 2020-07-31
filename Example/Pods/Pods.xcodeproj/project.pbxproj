@@ -692,7 +692,7 @@
 		BAE263041362D074978BB3B577DF0A05 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB14CF7A8F8ED3BAE2BACA798E5A488D /* enhance@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "enhance@2x.png"; path = "MBDocCapture/Assets/Icons/enhance/enhance@2x.png"; sourceTree = "<group>"; };
 		BB24B1367D45EE7B9B1DC5D3A9D73037 /* QuickTestSuite.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuickTestSuite.swift; path = Sources/Quick/QuickTestSuite.swift; sourceTree = "<group>"; };
-		BC4F6826E50B7DAA942A2A3492114B00 /* Paths.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Paths.swift; path = TuIdentidadSDK/Classes/Paths.swift; sourceTree = "<group>"; };
+		BC4F6826E50B7DAA942A2A3492114B00 /* Paths.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Paths.swift; sourceTree = "<group>"; };
 		BCA09C76A2CFBF9CAB7A8EEA8FB9BE99 /* CwlPreconditionTesting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CwlPreconditionTesting.h; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlPreconditionTesting/include/CwlPreconditionTesting.h; sourceTree = "<group>"; };
 		BCF5C5A85491556D57F8B054F21040F4 /* JGProgressHUDFadeZoomAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDFadeZoomAnimation.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDFadeZoomAnimation.m; sourceTree = "<group>"; };
 		BD44C59C713A4EA64AB332A41BFFA8CD /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -1321,6 +1321,7 @@
 		97867F2A24D4A3EF00AE7A6F /* CoreKit */ = {
 			isa = PBXGroup;
 			children = (
+				BC4F6826E50B7DAA942A2A3492114B00 /* Paths.swift */,
 				BD44C59C713A4EA64AB332A41BFFA8CD /* Extensions.swift */,
 			);
 			path = CoreKit;
@@ -1338,7 +1339,6 @@
 				D78E9836C12BEAFC7FCEC7C876AE0E70 /* IDValidationDelegate.swift */,
 				CB443060A2DB3830018AD340793EF7C1 /* IDViewController.swift */,
 				20C3360EB7D53392B05CEC5CFF12C9C0 /* LauncherHelper.swift */,
-				BC4F6826E50B7DAA942A2A3492114B00 /* Paths.swift */,
 				051987E6D2E78958FE64A3D4A6AAADF3 /* ResultsViewController.swift */,
 				EFC6C28BDB01C25CEFDFF8E831A10CE0 /* svUploader.swift */,
 				31201A80985EA852838CB18630969763 /* TUID.swift */,

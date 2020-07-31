@@ -48,10 +48,12 @@ public class IDAddressViewController: UIViewController, ImageScannerControllerDe
     
     @IBAction func validateAddressDocument() {
         
-        // Configure headers and path for upload request
+        // TODO: Configure path from configuration
         let uri = "http://address-service.westus2.azurecontainer.io/address"
+        
+        // Create headers for authentication
         let headers: HTTPHeaders = [
-            "ApiKey": "",
+            "ApiKey": self.apiKey,
             "Content-type":"multipart/form-data"
         ]
         

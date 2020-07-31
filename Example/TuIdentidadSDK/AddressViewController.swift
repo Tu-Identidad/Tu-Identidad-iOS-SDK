@@ -36,6 +36,7 @@ class AddressViewController: UITableViewController, IDAddressDocumentDelegate {
 //        TUID.instantiateIDAddress(delegate: self, context: self, apikey: "Your-Api-Key")
         let addressViewController = IDAddressViewController()
         addressViewController.delegate = self
+        addressViewController.apiKey = "Your-Api-Key"
         self.present(addressViewController, animated: true, completion: nil)
     }
     
