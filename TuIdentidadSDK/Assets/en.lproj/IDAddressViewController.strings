@@ -1,0 +1,6 @@
+
+/* Class = "UILabel"; text = "Presiona el icono para escanear tu documento."; ObjectID = "OV7-Sc-xUf"; */
+"OV7-Sc-xUf.text" = "Presiona el icono para escanear tu documento.";
+
+/* Class = "UIButton"; normalTitle = "Validar documento"; ObjectID = "udv-3P-zRa"; */
+"udv-3P-zRa.normalTitle" = "Validar documento";
