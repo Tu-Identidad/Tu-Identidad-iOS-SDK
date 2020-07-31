@@ -190,6 +190,8 @@
 		97867F1A24D3927400AE7A6F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97867F1C24D3927400AE7A6F /* Localizable.strings */; };
 		97867F2424D3983C00AE7A6F /* IDAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97867F2324D3983C00AE7A6F /* IDAddressViewController.xib */; };
 		97867F2524D39CDB00AE7A6F /* IDAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97867F2324D3983C00AE7A6F /* IDAddressViewController.xib */; };
+		97867F2724D490EB00AE7A6F /* TuIDCoreKit.podspec.example in Resources */ = {isa = PBXBuildFile; fileRef = 97867F2624D490EB00AE7A6F /* TuIDCoreKit.podspec.example */; };
+		97867F2924D4913700AE7A6F /* TuIDAddressKit.podspec.example in Resources */ = {isa = PBXBuildFile; fileRef = 97867F2824D4913700AE7A6F /* TuIDAddressKit.podspec.example */; };
 		97A168DFB6DB61770CE2DBF4FD39AA8D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4658337BE59B8D9F75CAF14B20FF9317 /* CFNetwork.framework */; };
 		99A1378F4758867783A9F5F8519CFAFC /* JGProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F97A9C3CC6B4E089787AF679BFDB55 /* JGProgressHUD-dummy.m */; };
 		99E8019F4689A514DAC6AA40AFF7352E /* NMBObjCMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F04EF19CB622445605101232CFFB0B /* NMBObjCMatcher.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -642,6 +644,8 @@
 		97867F1B24D3927400AE7A6F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		97867F1D24D3929800AE7A6F /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		97867F2324D3983C00AE7A6F /* IDAddressViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IDAddressViewController.xib; sourceTree = "<group>"; };
+		97867F2624D490EB00AE7A6F /* TuIDCoreKit.podspec.example */ = {isa = PBXFileReference; lastKnownFileType = text; path = TuIDCoreKit.podspec.example; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		97867F2824D4913700AE7A6F /* TuIDAddressKit.podspec.example */ = {isa = PBXFileReference; lastKnownFileType = text; path = TuIDAddressKit.podspec.example; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		97B4F226636A5550A2D11901135E4885 /* QuickConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuickConfiguration.swift; path = Sources/Quick/Configuration/QuickConfiguration.swift; sourceTree = "<group>"; };
 		9812919D3D5D5B109B3DADC6C2072778 /* TuIdentidadSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TuIdentidadSDK-umbrella.h"; sourceTree = "<group>"; };
 		984D101A10EB375D04BAFBF8CD39DCA6 /* QuickSpecBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QuickSpecBase.h; path = Sources/QuickObjCRuntime/include/QuickSpecBase.h; sourceTree = "<group>"; };
@@ -691,7 +695,7 @@
 		BC4F6826E50B7DAA942A2A3492114B00 /* Paths.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Paths.swift; path = TuIdentidadSDK/Classes/Paths.swift; sourceTree = "<group>"; };
 		BCA09C76A2CFBF9CAB7A8EEA8FB9BE99 /* CwlPreconditionTesting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CwlPreconditionTesting.h; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlPreconditionTesting/include/CwlPreconditionTesting.h; sourceTree = "<group>"; };
 		BCF5C5A85491556D57F8B054F21040F4 /* JGProgressHUDFadeZoomAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDFadeZoomAnimation.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDFadeZoomAnimation.m; sourceTree = "<group>"; };
-		BD44C59C713A4EA64AB332A41BFFA8CD /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = TuIdentidadSDK/Classes/Extensions.swift; sourceTree = "<group>"; };
+		BD44C59C713A4EA64AB332A41BFFA8CD /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BDEE830079D710418099F2E7F5687825 /* Nimble.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Nimble.h; path = Sources/Nimble/Nimble.h; sourceTree = "<group>"; };
 		BF91B48B06F82D6EC7718EB405CB70E3 /* ExampleMetadata.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExampleMetadata.swift; path = Sources/Quick/ExampleMetadata.swift; sourceTree = "<group>"; };
 		C10F57A8B9BF6C30F28C9D432FF294F3 /* TuIdentidadSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TuIdentidadSDK.modulemap; sourceTree = "<group>"; };
@@ -909,6 +913,8 @@
 				E10BFD15689981021C694668AD5649EC /* LICENSE */,
 				78747B5C46512F11288DC330076C48BE /* README.md */,
 				6D2E5B575A97E3C5F2D9300CC8716CB4 /* TuIdentidadSDK.podspec */,
+				97867F2624D490EB00AE7A6F /* TuIDCoreKit.podspec.example */,
+				97867F2824D4913700AE7A6F /* TuIDAddressKit.podspec.example */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
@@ -1312,12 +1318,20 @@
 			path = AddressKit;
 			sourceTree = "<group>";
 		};
+		97867F2A24D4A3EF00AE7A6F /* CoreKit */ = {
+			isa = PBXGroup;
+			children = (
+				BD44C59C713A4EA64AB332A41BFFA8CD /* Extensions.swift */,
+			);
+			path = CoreKit;
+			sourceTree = "<group>";
+		};
 		99AB3C1F64F382C6C4C7B082AD6E11F0 /* TuIdentidadSDK */ = {
 			isa = PBXGroup;
 			children = (
+				97867F2A24D4A3EF00AE7A6F /* CoreKit */,
 				9769916724CE698F0009B867 /* AddressKit */,
 				65F48C1D65E16817D7DB45D774833DD3 /* Enums.swift */,
-				BD44C59C713A4EA64AB332A41BFFA8CD /* Extensions.swift */,
 				9F826816C88A43A975C4EA0BFE8853C9 /* IDAuth.swift */,
 				87846150C9ED23640292B62C1EEB32DA /* IDValidateOptions.swift */,
 				3AE4C10D3B55D0414B0CCB665F4CEDCE /* IDValidation.swift */,
@@ -1956,7 +1970,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				97867F2424D3983C00AE7A6F /* IDAddressViewController.xib in Resources */,
+				97867F2924D4913700AE7A6F /* TuIDAddressKit.podspec.example in Resources */,
 				97867F0B24D0B88500AE7A6F /* Media.xcassets in Resources */,
+				97867F2724D490EB00AE7A6F /* TuIDCoreKit.podspec.example in Resources */,
 				97867F1A24D3927400AE7A6F /* Localizable.strings in Resources */,
 				15F63F8CDB8F0D0DE8102D59DEFCB189 /* TuIdentidadSDK.bundle in Resources */,
 			);

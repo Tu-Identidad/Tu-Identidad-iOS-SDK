@@ -33,10 +33,4 @@ public class TUID: NSObject {
         tmpController.showResults = showResults
         context.present(tmpController, animated: true, completion: nil)
     }
-    
-    open class func instantiateIDAddress(delegate: IDAddressDocumentDelegate, context: UIViewController, apikey: String) {
-        let addressViewController = IDAddressViewController()
-        addressViewController.delegate = delegate
-        context.present(addressViewController, animated: true, completion: nil)
-    }
 }

@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name             = '2IDAddressKit'
+  s.name             = 'TuIDCoreKit'
   s.version          = '1.1.4'
   s.summary          = 'Official Tu Identidad SDK for iOS to access Tu Identidad Platform'
 
@@ -31,12 +31,10 @@ Validation Services:
   s.dependency 'MBDocCapture', '~> 0.1.4'
   s.dependency 'Toast-Swift', '~> 5.0.0'
   
-  s.default_subspecs = 'Address'
+  s.default_subspecs = 'Core'
   
-  s.subspec 'Address' do |ss|
-      ss.dependency '2IDCoreKit'
-      
-      ss.source_files = 'AddressKit/**/*'
+  s.subspec 'Core' do |ss|
+    ss.source_files = 'CoreKit/**/*'
   end
 end
 

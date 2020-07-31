@@ -35,7 +35,14 @@ Validation Services:
   s.dependency 'MBDocCapture', '~> 0.1.4'
   s.dependency 'Toast-Swift', '~> 5.0.0'
   
-  s.subspec 'AddressKit' do |addressKit|
-    addressKit.source_files = 'AddressKit/**/*'
+  s.default_subspecs = 'CoreKit'
+  
+  s.subspec 'CoreKit' do |ss|
+    ss.source_files = 'CoreKit/**/*'
+  end
+  
+  s.subspec 'AddressKit' do |ss|
+    ss.dependency 'TuIdentidadSDK/CoreKit'
+    ss.source_files = 'AddressKit/**/*'
   end
 end

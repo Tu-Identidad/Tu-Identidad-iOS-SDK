@@ -33,7 +33,10 @@ class AddressViewController: UITableViewController, IDAddressDocumentDelegate {
     @IBOutlet weak var lngLabel: UILabel!
     
     @IBAction func didValidateIdTouchUpInside(_ sender: Any) {
-        TUID.instantiateIDAddress(delegate: self, context: self, apikey: "Your-Api-Key")
+//        TUID.instantiateIDAddress(delegate: self, context: self, apikey: "Your-Api-Key")
+        let addressViewController = IDAddressViewController()
+        addressViewController.delegate = self
+        self.present(addressViewController, animated: true, completion: nil)
     }
     
     // MARK: - IDAddressDocumentDelegate
