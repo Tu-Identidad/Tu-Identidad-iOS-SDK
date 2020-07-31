@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IDAddressViewController" customModule="TuIdentidadSDK" customModuleProvider="target">
+            <connections>
+                <outlet property="scanAddressDocumentButton" destination="BMX-Dm-QZS" id="8Pq-9Z-uxC"/>
+                <outlet property="view" destination="iN0-l3-epB" id="SNW-s8-gOp"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Presiona el icono para escanear tu documento." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CwE-xZ-qgf">
+                    <rect key="frame" x="16" y="92" width="382" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMX-Dm-QZS">
+                    <rect key="frame" x="66.5" y="134" width="281" height="471"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="480" id="LSh-8f-v9w"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="addressDocumentIcon"/>
+                    <connections>
+                        <action selector="scanAddressDocument" destination="-1" eventType="touchUpInside" id="dpj-7v-zT6"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NM9-b1-MXi">
+                    <rect key="frame" x="125.5" y="629" width="163" height="34"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <state key="normal" title="Validar documento">
+                        <color key="titleColor" red="0.56470588239999997" green="0.54901960780000003" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="validateAddressDocument" destination="-1" eventType="touchUpInside" id="0BN-Z0-xj7"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="NM9-b1-MXi" firstAttribute="top" secondItem="BMX-Dm-QZS" secondAttribute="bottom" constant="24" id="2co-cY-0zR"/>
+                <constraint firstItem="BMX-Dm-QZS" firstAttribute="top" secondItem="CwE-xZ-qgf" secondAttribute="bottom" constant="24" id="7Y6-QC-hea"/>
+                <constraint firstItem="BMX-Dm-QZS" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="7a5-Jb-TIh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BMX-Dm-QZS" secondAttribute="trailing" constant="16" id="B3b-ZL-ERQ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="CwE-xZ-qgf" secondAttribute="trailing" constant="16" id="GRS-2A-Zar"/>
+                <constraint firstItem="CwE-xZ-qgf" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="48" id="Rnn-HI-7GU"/>
+                <constraint firstItem="CwE-xZ-qgf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="bg3-FK-5C0"/>
+                <constraint firstItem="BMX-Dm-QZS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="cFa-Io-3ru"/>
+                <constraint firstItem="NM9-b1-MXi" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="egl-yc-Q6u"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="139" y="114"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="addressDocumentIcon" width="281" height="471"/>
+    </resources>
+</document>

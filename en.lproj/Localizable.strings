@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  Pods
+
+  Created by Aaron Munguia on 30/07/20.
+  
+*/
+"tuidentidadsdk.alert_title" = "Document validation";
+
+"tuidentidadsdk.alert_message" = "Scan your document to request a validation.";
+
+"tuidentidadsdk.alert_ok_button" = "Ok";
