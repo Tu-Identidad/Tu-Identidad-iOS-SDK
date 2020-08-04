@@ -22,7 +22,10 @@ Validation Services:
   s.source_files = 'TuIdentidadSDK/Classes/**/*'
   
   s.resource_bundles = {
-    'TuIdentidadSDK' => ['TuIdentidadSDK/Assets/*.{png,xib}']
+    'TuIdentidadSDK' => [
+      'TuIdentidadSDK/Assets/*.{png,xib,xcassets,strings}',
+      'TuIdentidadSDK/Assets/**/**/*'
+    ]
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
