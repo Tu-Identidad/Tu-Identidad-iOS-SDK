@@ -49,7 +49,7 @@ public class IDAddressViewController: UIViewController, ImageScannerControllerDe
     @IBAction func validateAddressDocument() {
         
         // TODO: Configure path from configuration
-        let uri = "http://address-service.westus2.azurecontainer.io/address"
+        let uri = "https://web-prod01.tuidentidad.com/api/Address/cfe"
         
         // Create headers for authentication
         let headers: HTTPHeaders = [
