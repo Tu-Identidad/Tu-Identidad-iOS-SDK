@@ -46,7 +46,7 @@ class ViewController: UITableViewController, IDValidationDelegate {
     }
     
     @IBAction func didValidateIdTouchUpInside(_ sender: Any) {
-        TUID.instantiateIDAuth(delegate: self, context: self, apikey: "", method: .INE, showResults: false, validateOptions: IDValidateOptions(checkInfo: true, checkQuality: true, checkPatterns: true, checkCurp: true, checkFace: true))
+        TUID.instantiateIDAuth(delegate: self, context: self, apikey: "vh2Q0pO4", method: .INE, showResults: false, validateOptions: IDValidateOptions(checkInfo: true, checkQuality: true, checkPatterns: true, checkCurp: true, checkFace: true))
     }
     
     // MARK - IDAuthDelegate
@@ -127,6 +127,6 @@ class ViewController: UITableViewController, IDValidationDelegate {
     
     func error(response: String) {
         print("On Error response")
-        print(response)
+        print(response) 
     }
 }
