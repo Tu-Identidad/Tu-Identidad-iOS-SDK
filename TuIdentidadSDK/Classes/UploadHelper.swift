@@ -17,7 +17,7 @@ public class UploadHelper{
     public static func sendINE(ineFront: Data, ineBack: Data, api: String, m: Methods){
         var uri = Paths.baseURL!
         let ineFPath = Util.saveImageFile(filename: "ineFront.png", data: ineFront)!
-        let ineBPath = Util.saveImageFile(filename: "ineBack.png", data: ineBack)!
+        let ineBPath = Util.saveImageFile(filename: "ineBack.png", data: ineBack)! 
         
         let ineFData = Util.getImageData(filename: ineFPath)
         let ineBData = Util.getImageData(filename: ineBPath)
