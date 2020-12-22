@@ -14,10 +14,10 @@ public class UploadHelper{
     public static let u_r = "UPLOAD_REQUEST"
     public static let t_r = "THUMBNAIL_REQUEST"
     
-    public static func sendINE(ineFront: UIImage, ineBack: UIImage, api: String, m: Methods){
+    public static func sendINE(ineFront: Data, ineBack: Data, api: String, m: Methods){
         var uri = Paths.baseURL!
-        let ineFPath = Util.saveImageFile(filename: "ineFront.png", image: ineFront)!
-        let ineBPath = Util.saveImageFile(filename: "ineBack.png", image: ineBack)!
+        let ineFPath = Util.saveImageFile(filename: "ineFront.png", data: ineFront)!
+        let ineBPath = Util.saveImageFile(filename: "ineBack.png", data: ineBack)!
         
         let ineFData = Util.getImageData(filename: ineFPath)
         let ineBData = Util.getImageData(filename: ineBPath)
@@ -96,6 +96,7 @@ public class UploadHelper{
             }
         }
     }
+    
     
     public static func getThumbnail(ineFront: UIImage){
         let uri = Paths.mobileBaseURL! + Paths.prefix.analize!

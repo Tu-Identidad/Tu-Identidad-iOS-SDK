@@ -112,6 +112,7 @@ public class IDViewController: UIViewController, ImageScannerControllerDelegate 
         }
     }
     
+    
     @IBAction func ineFrontScan(_ sender: Any) {
         scan(side: .Front)
     }
@@ -120,8 +121,14 @@ public class IDViewController: UIViewController, ImageScannerControllerDelegate 
     }
     @IBAction func validateIne(_ sender: Any) {
         if ineFront != nil && ineBack != nil{
+            
+            if let ineFrontCompress = ineFront.jpegData(compressionQuality: 0.5), let ineBackCompress = ineBack.jpegData(compressionQuality: 0.5){
+                UploadHelper.sendINE(ineFront: ineFrontCompress, ineBack: ineBackCompress, api: self.apikey, m: self.method)
+            }else{
+                print("Error en la compresión")
+            }
             hud = self.view.showLoadingHUD()
-            UploadHelper.sendINE(ineFront: ineFront, ineBack: ineBack, api: self.apikey, m: self.method)
+           
         }else{
             if !ineFrontCaptured{
                 print("No has capturado el ineFront")
