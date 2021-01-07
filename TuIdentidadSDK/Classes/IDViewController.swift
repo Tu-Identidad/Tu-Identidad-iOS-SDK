@@ -27,7 +27,8 @@ public class IDViewController: UIViewController, ImageScannerControllerDelegate 
     public var apikey: String!
     public var showResults: Bool! = true
     public var validateOptions: IDValidateOptions!
-   
+    
+    
     public init () {
         let bundle = Bundle(for: IDViewController.self)
         let bundleURL = bundle.resourceURL?.appendingPathComponent("TuIdentidadSDK.bundle")
@@ -123,7 +124,7 @@ public class IDViewController: UIViewController, ImageScannerControllerDelegate 
         if ineFront != nil && ineBack != nil{
             
             if let ineFrontCompress = ineFront.jpegData(compressionQuality: 0.5), let ineBackCompress = ineBack.jpegData(compressionQuality: 0.5){
-                UploadHelper.sendINE(ineFront: ineFrontCompress, ineBack: ineBackCompress, api: self.apikey, m: self.method)
+                UploadHelper.sendINE(ineFront: ineFrontCompress, ineBack: ineBackCompress, api: self.apikey, m: self.method, p: IDValidateOptions(checkInfo: true, checkQuality: true, checkPatterns: true, checkCurp: true, checkFace: true))
             }else{
                 print("Error en la compresión") 
             }
