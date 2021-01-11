@@ -28,7 +28,6 @@ public class IDViewController: UIViewController, ImageScannerControllerDelegate 
     public var showResults: Bool! = true
     public var validateOptions: IDValidateOptions!
     
-    
     public init () {
         let bundle = Bundle(for: IDViewController.self)
         let bundleURL = bundle.resourceURL?.appendingPathComponent("TuIdentidadSDK.bundle")
@@ -43,7 +42,6 @@ public class IDViewController: UIViewController, ImageScannerControllerDelegate 
 
     public override func viewDidLoad() {
         super.viewDidLoad()
-   
         if #available(iOS 13.0, *) {
             overrideUserInterfaceStyle = .light
         } else {
@@ -112,8 +110,6 @@ public class IDViewController: UIViewController, ImageScannerControllerDelegate 
             }
         }
     }
-    
-    
     @IBAction func ineFrontScan(_ sender: Any) {
         scan(side: .Front)
     }
@@ -124,7 +120,7 @@ public class IDViewController: UIViewController, ImageScannerControllerDelegate 
         if ineFront != nil && ineBack != nil{
             
             if let ineFrontCompress = ineFront.jpegData(compressionQuality: 0.5), let ineBackCompress = ineBack.jpegData(compressionQuality: 0.5){
-                UploadHelper.sendINE(ineFront: ineFrontCompress, ineBack: ineBackCompress, api: self.apikey, m: self.method, p: IDValidateOptions(checkInfo: true, checkQuality: true, checkPatterns: true, checkCurp: true, checkFace: true))
+                UploadHelper.sendINE(ineFront: ineFrontCompress, ineBack: ineBackCompress, api: self.apikey, m: self.method, p: validateOptions)
             }else{
                 print("Error en la compresión") 
             }
