@@ -27,7 +27,7 @@ public class IDViewController: UIViewController, ImageScannerControllerDelegate 
     public var apikey: String!
     public var showResults: Bool! = true
     public var validateOptions: IDValidateOptions!
-   
+    
     public init () {
         let bundle = Bundle(for: IDViewController.self)
         let bundleURL = bundle.resourceURL?.appendingPathComponent("TuIdentidadSDK.bundle")
@@ -42,7 +42,6 @@ public class IDViewController: UIViewController, ImageScannerControllerDelegate 
 
     public override func viewDidLoad() {
         super.viewDidLoad()
-   
         if #available(iOS 13.0, *) {
             overrideUserInterfaceStyle = .light
         } else {
@@ -111,7 +110,6 @@ public class IDViewController: UIViewController, ImageScannerControllerDelegate 
             }
         }
     }
-    
     @IBAction func ineFrontScan(_ sender: Any) {
         scan(side: .Front)
     }
@@ -120,8 +118,14 @@ public class IDViewController: UIViewController, ImageScannerControllerDelegate 
     }
     @IBAction func validateIne(_ sender: Any) {
         if ineFront != nil && ineBack != nil{
+            
+            if let ineFrontCompress = ineFront.jpegData(compressionQuality: 0.5), let ineBackCompress = ineBack.jpegData(compressionQuality: 0.5){
+                UploadHelper.sendINE(ineFront: ineFrontCompress, ineBack: ineBackCompress, api: self.apikey, m: self.method, p: validateOptions)
+            }else{
+                print("Error en la compresión") 
+            }
             hud = self.view.showLoadingHUD()
-            UploadHelper.sendINE(ineFront: ineFront, ineBack: ineBack, api: self.apikey, m: self.method)
+           
         }else{
             if !ineFrontCaptured{
                 print("No has capturado el ineFront")

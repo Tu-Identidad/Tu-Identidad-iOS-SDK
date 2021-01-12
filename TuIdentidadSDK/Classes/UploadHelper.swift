@@ -14,14 +14,12 @@ public class UploadHelper{
     public static let u_r = "UPLOAD_REQUEST"
     public static let t_r = "THUMBNAIL_REQUEST"
     
-    public static func sendINE(ineFront: UIImage, ineBack: UIImage, api: String, m: Methods){
+    public static func sendINE(ineFront: Data, ineBack: Data, api: String, m: Methods, p: IDValidateOptions){
         var uri = Paths.baseURL!
-        let ineFPath = Util.saveImageFile(filename: "ineFront.png", image: ineFront)!
-        let ineBPath = Util.saveImageFile(filename: "ineBack.png", image: ineBack)!
-        
+        let ineFPath = Util.saveImageFile(filename: "ineFront.png", data: ineFront)!
+        let ineBPath = Util.saveImageFile(filename: "ineBack.png", data: ineBack)!
         let ineFData = Util.getImageData(filename: ineFPath)
         let ineBData = Util.getImageData(filename: ineBPath)
-        
         switch m {
         case .IDVAL:
             uri += Paths.prefix.auth!
@@ -30,22 +28,20 @@ public class UploadHelper{
             uri += Paths.prefix.ocr!
             break
         case .INE:
-            uri += Paths.prefix.ine!
+            uri += Paths.prefix.ine! + "?" + "checkInfo=" + String(p.checkInfo) + "&" + "checkQuality=" + String(p.checkQuality) + "&" + "checkPatterns=" + String(p.checkPatterns) + "&" + "checkCurp=" + String(p.checkCurp) + "&" + "checkFace=" + String(p.checkFace)
         break
         }
-        
         let headers: HTTPHeaders = [
             "ApiKey": api,
             "Content-type":"multipart/form-data"
         ]
-        
         let queue = DispatchQueue.main
         queue.async {
             AF.upload(multipartFormData: {
                     multipartFormData in
                     multipartFormData.append(ineFData, withName: "FrontFile", fileName: "FrontFile", mimeType: "application/octet-stream")
                     multipartFormData.append(ineBData, withName: "BackFile", fileName: "BackFile", mimeType: "application/octet-stream")
-            }, to: uri, method: .post, headers: headers)
+            }, to: uri , method: .post, headers: headers)
             .uploadProgress{ progress in
                 let p = progress.fractionCompleted
                 NotificationCenter.default.post(name: Notification.Name(self.u_r), object: self, userInfo: [
@@ -96,7 +92,6 @@ public class UploadHelper{
             }
         }
     }
-    
     public static func getThumbnail(ineFront: UIImage){
         let uri = Paths.mobileBaseURL! + Paths.prefix.analize!
         let ineFPath = Util.saveImageFile(filename: "ineFront.png", image: ineFront)!
@@ -105,7 +100,6 @@ public class UploadHelper{
         let headers: HTTPHeaders = [
             "Content-type":"multipart/form-data"
         ]
-        
         let queue = DispatchQueue.main
         queue.async {
             AF.upload(multipartFormData: {
@@ -138,8 +132,6 @@ public class UploadHelper{
         }
     }
 }
-
-
 public class MyRequestInterceptor: RequestInterceptor {
     public func adapt(_ urlRequest: URLRequest, for session: Session, completion: @escaping (Result<URLRequest, Error>) -> Void) {
         var urlRequest = urlRequest
