@@ -44,6 +44,8 @@
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>This app use the camare to validate documents with pictures.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This app use the gallery to validate documents with pictures.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

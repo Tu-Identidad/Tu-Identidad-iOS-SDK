@@ -9,8 +9,7 @@ import UIKit
 import MBDocCapture
 import JGProgressHUD
 
-public class IDViewController: UIViewController, ImageScannerControllerDelegate {
-    
+public class IDViewController: UIViewController, ImageScannerControllerDelegate, UINavigationControllerDelegate,UIImagePickerControllerDelegate {
     var delegate: IDValidationDelegate?
     
     @IBOutlet weak var imgIneFront: UIButton!
@@ -27,7 +26,6 @@ public class IDViewController: UIViewController, ImageScannerControllerDelegate 
     public var apikey: String!
     public var showResults: Bool! = true
     public var validateOptions: IDValidateOptions!
-    
     public init () {
         let bundle = Bundle(for: IDViewController.self)
         let bundleURL = bundle.resourceURL?.appendingPathComponent("TuIdentidadSDK.bundle")
@@ -166,11 +164,36 @@ public class IDViewController: UIViewController, ImageScannerControllerDelegate 
     }
     
     public func scan(side: IneSide){
-        let vcScanner = ImageScannerController(image: nil, delegate: self)
-        if #available(iOS 13.0, *) {
-            vcScanner.overrideUserInterfaceStyle = .light
-        }
-        present(vcScanner, animated: true, completion: nil)
         self.currentSide = side
+        let actionsheet = UIAlertController()
+        actionsheet.addAction(UIAlertAction(title: "Capturar Imagen", style: .default,handler:{
+            action in
+            let vcScanner = ImageScannerController(image: nil, delegate: self)
+            if #available(iOS 13.0, *) {
+                vcScanner.overrideUserInterfaceStyle = .light
+            }
+            self.present(vcScanner, animated: true, completion: nil)
+        }))
+        actionsheet.addAction(UIAlertAction(title: "Adjuntar Imagen", style: .default,handler:{
+            action in
+            let imageController = UIImagePickerController()
+            imageController.delegate = self
+            imageController.sourceType = UIImagePickerController.SourceType.photoLibrary
+            imageController.allowsEditing = true
+            self.present(imageController , animated: true)
+        }))
+        actionsheet.addAction(UIAlertAction(title: "Cancelar", style: .destructive,handler:{
+            action in
+        }))
+        present(actionsheet, animated: true)
     }
-}
+    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
+        self.dismiss(animated: true, completion:nil)
+        let vcScanner = ImageScannerController(image: image, delegate: self)
+        self.present(vcScanner, animated: true, completion: nil)
+    }
+   }
+
+    
+    
