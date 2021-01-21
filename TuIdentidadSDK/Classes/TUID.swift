@@ -31,6 +31,7 @@ public class TUID: NSObject {
         tmpController.apikey = apikey
         tmpController.method = method
         tmpController.showResults = showResults
+        tmpController.validateOptions = validateOptions
         context.present(tmpController, animated: true, completion: nil)
     }
 }
