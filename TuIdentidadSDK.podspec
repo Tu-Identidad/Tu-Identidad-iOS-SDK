@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'TuIdentidadSDK'
-  s.version          = '1.1.4'
+  s.version          = '1.1.5'
   s.summary          = 'Official Tu Identidad SDK for iOS to access Tu Identidad Platform'
 
   s.description      = <<-DESC
@@ -22,7 +22,10 @@ Validation Services:
   s.source_files = 'TuIdentidadSDK/Classes/**/*'
   
   s.resource_bundles = {
-    'TuIdentidadSDK' => ['TuIdentidadSDK/Assets/*.{png,xib}']
+    'TuIdentidadSDK' => [
+      'TuIdentidadSDK/Assets/*.{png,xib,xcassets,strings}',
+      'TuIdentidadSDK/Assets/**/**/*'
+    ]
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'

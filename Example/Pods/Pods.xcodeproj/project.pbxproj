@@ -185,14 +185,12 @@
 		9769917224CF548C0009B867 /* IDAddressDocumentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9769917124CF548C0009B867 /* IDAddressDocumentDelegate.swift */; };
 		9769917624CF90560009B867 /* IDAddressDocumentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9769917524CF90560009B867 /* IDAddressDocumentResponse.swift */; };
 		9769917824CF99350009B867 /* IDErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9769917724CF99350009B867 /* IDErrorResponse.swift */; };
-		97867F0B24D0B88500AE7A6F /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97867F0A24D0B88500AE7A6F /* Media.xcassets */; };
-		97867F0C24D0B88500AE7A6F /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97867F0A24D0B88500AE7A6F /* Media.xcassets */; };
-		97867F1A24D3927400AE7A6F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97867F1C24D3927400AE7A6F /* Localizable.strings */; };
-		97867F2424D3983C00AE7A6F /* IDAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97867F2324D3983C00AE7A6F /* IDAddressViewController.xib */; };
-		97867F2524D39CDB00AE7A6F /* IDAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97867F2324D3983C00AE7A6F /* IDAddressViewController.xib */; };
 		97867F2724D490EB00AE7A6F /* TuIDCoreKit.podspec.example in Resources */ = {isa = PBXBuildFile; fileRef = 97867F2624D490EB00AE7A6F /* TuIDCoreKit.podspec.example */; };
 		97867F2924D4913700AE7A6F /* TuIDAddressKit.podspec.example in Resources */ = {isa = PBXBuildFile; fileRef = 97867F2824D4913700AE7A6F /* TuIDAddressKit.podspec.example */; };
 		97A168DFB6DB61770CE2DBF4FD39AA8D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4658337BE59B8D9F75CAF14B20FF9317 /* CFNetwork.framework */; };
+		97CAFB1224D9B3EC004366A4 /* IDAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97CAFB1124D9B3EC004366A4 /* IDAddressViewController.xib */; };
+		97CAFB1424D9B439004366A4 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97CAFB1324D9B439004366A4 /* Media.xcassets */; };
+		97CAFB1B24D9B4CC004366A4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97CAFB1924D9B4CB004366A4 /* Localizable.strings */; };
 		99A1378F4758867783A9F5F8519CFAFC /* JGProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F97A9C3CC6B4E089787AF679BFDB55 /* JGProgressHUD-dummy.m */; };
 		99E8019F4689A514DAC6AA40AFF7352E /* NMBObjCMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F04EF19CB622445605101232CFFB0B /* NMBObjCMatcher.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		9B9714C476F416AD7FD803EA1184D113 /* BeLessThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C945CB82C8AD5C22366B4E51834A5CC /* BeLessThan.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -640,13 +638,13 @@
 		9769917124CF548C0009B867 /* IDAddressDocumentDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDAddressDocumentDelegate.swift; sourceTree = "<group>"; };
 		9769917524CF90560009B867 /* IDAddressDocumentResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDAddressDocumentResponse.swift; sourceTree = "<group>"; };
 		9769917724CF99350009B867 /* IDErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDErrorResponse.swift; sourceTree = "<group>"; };
-		97867F0A24D0B88500AE7A6F /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
-		97867F1B24D3927400AE7A6F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		97867F1D24D3929800AE7A6F /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		97867F2324D3983C00AE7A6F /* IDAddressViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IDAddressViewController.xib; sourceTree = "<group>"; };
 		97867F2624D490EB00AE7A6F /* TuIDCoreKit.podspec.example */ = {isa = PBXFileReference; lastKnownFileType = text; path = TuIDCoreKit.podspec.example; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		97867F2824D4913700AE7A6F /* TuIDAddressKit.podspec.example */ = {isa = PBXFileReference; lastKnownFileType = text; path = TuIDAddressKit.podspec.example; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		97B4F226636A5550A2D11901135E4885 /* QuickConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuickConfiguration.swift; path = Sources/Quick/Configuration/QuickConfiguration.swift; sourceTree = "<group>"; };
+		97CAFB1124D9B3EC004366A4 /* IDAddressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = IDAddressViewController.xib; path = TuIdentidadSDK/Assets/IDAddressViewController.xib; sourceTree = "<group>"; };
+		97CAFB1324D9B439004366A4 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = TuIdentidadSDK/Assets/Media.xcassets; sourceTree = "<group>"; };
+		97CAFB1A24D9B4CB004366A4 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "TuIdentidadSDK/Assets/es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		97CAFB1C24D9B4D4004366A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = TuIdentidadSDK/Assets/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9812919D3D5D5B109B3DADC6C2072778 /* TuIdentidadSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TuIdentidadSDK-umbrella.h"; sourceTree = "<group>"; };
 		984D101A10EB375D04BAFBF8CD39DCA6 /* QuickSpecBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QuickSpecBase.h; path = Sources/QuickObjCRuntime/include/QuickSpecBase.h; sourceTree = "<group>"; };
 		99F6D3365CE5184BDF550A8C64D66F93 /* JGProgressHUD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JGProgressHUD.release.xcconfig; sourceTree = "<group>"; };
@@ -1292,17 +1290,17 @@
 		947B231834730864D2D299F3AC21B896 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				97CAFB1324D9B439004366A4 /* Media.xcassets */,
 				D6C7C7F98A555682B3F37CD3FC880E39 /* arrow_left.png */,
 				F5010BCE3183239C217D07EFBAA48FAD /* ic_logo.png */,
 				DF95674E34220186025EE829308F2C26 /* IDViewController.xib */,
+				97CAFB1124D9B3EC004366A4 /* IDAddressViewController.xib */,
 				28A57BFACCD68FB806308C49BC37A3AD /* ine_bg.png */,
 				CAFED472B235DF4570CAF888DD1DAB8A /* ineback.png */,
 				EEE0E8E3C4A76E398A4B29A029B74A89 /* inefront.png */,
 				F51BA82280B6D38C3611C829E8BC0880 /* ResultsViewController.xib */,
 				C96C85BD7695C72DF467EBAA5025524D /* tuidentidadletras.png */,
-				97867F0A24D0B88500AE7A6F /* Media.xcassets */,
-				97867F1C24D3927400AE7A6F /* Localizable.strings */,
-				97867F2324D3983C00AE7A6F /* IDAddressViewController.xib */,
+				97CAFB1924D9B4CB004366A4 /* Localizable.strings */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1902,13 +1900,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97867F0C24D0B88500AE7A6F /* Media.xcassets in Resources */,
 				C6D8A401AACE594EED19F76FB1C23F8C /* arrow_left.png in Resources */,
 				4AF68FB372A4057EE853DA295BFCC38F /* ic_logo.png in Resources */,
+				97CAFB1B24D9B4CC004366A4 /* Localizable.strings in Resources */,
 				50ECE6DABA7E4FA586D994EC28A3E554 /* IDViewController.xib in Resources */,
 				E82FCDECCF3BA627FF26F65D40D0006D /* ine_bg.png in Resources */,
+				97CAFB1424D9B439004366A4 /* Media.xcassets in Resources */,
+				97CAFB1224D9B3EC004366A4 /* IDAddressViewController.xib in Resources */,
 				5120F119031068A06A87B151F2F66628 /* ineback.png in Resources */,
-				97867F2524D39CDB00AE7A6F /* IDAddressViewController.xib in Resources */,
 				BF43DC723333226D297162522C04AEE7 /* inefront.png in Resources */,
 				594BF5EC53A3BB35CD058EA915E1928A /* ResultsViewController.xib in Resources */,
 				22CC6201B3987F74C2466C3EC09E0266 /* tuidentidadletras.png in Resources */,
@@ -1969,11 +1968,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97867F2424D3983C00AE7A6F /* IDAddressViewController.xib in Resources */,
 				97867F2924D4913700AE7A6F /* TuIDAddressKit.podspec.example in Resources */,
-				97867F0B24D0B88500AE7A6F /* Media.xcassets in Resources */,
 				97867F2724D490EB00AE7A6F /* TuIDCoreKit.podspec.example in Resources */,
-				97867F1A24D3927400AE7A6F /* Localizable.strings in Resources */,
 				15F63F8CDB8F0D0DE8102D59DEFCB189 /* TuIdentidadSDK.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2379,11 +2375,11 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		97867F1C24D3927400AE7A6F /* Localizable.strings */ = {
+		97CAFB1924D9B4CB004366A4 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				97867F1B24D3927400AE7A6F /* en */,
-				97867F1D24D3929800AE7A6F /* es-419 */,
+				97CAFB1A24D9B4CB004366A4 /* es-419 */,
+				97CAFB1C24D9B4D4004366A4 /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
