@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'TuIdentidadSDK'
-  s.version          = '1.1.5'
+  s.version          = '1.1.6'
   s.summary          = 'Official Tu Identidad SDK for iOS to access Tu Identidad Platform'
 
   s.description      = <<-DESC
@@ -31,11 +31,11 @@ Validation Services:
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
-  s.dependency 'Alamofire', '~> 5.0.0-rc.3'
+  s.dependency 'Alamofire'
 #  s.dependency 'Eureka', '~> 5.1.0'
   s.dependency 'HandyJSON', '~> 5.0.1'
   s.dependency 'JGProgressHUD'
-  s.dependency 'MBDocCapture', '~> 0.1.4'
+  s.dependency 'MBDocCapture'
   s.dependency 'Toast-Swift', '~> 5.0.0'
   
   s.default_subspecs = 'CoreKit'

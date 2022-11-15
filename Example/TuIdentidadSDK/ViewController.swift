@@ -12,6 +12,7 @@ import TuIdentidadSDK
 class ViewController: UITableViewController, IDValidationDelegate {
         
     @IBOutlet weak var validateIdButton: UIButton!
+    @IBOutlet weak var msgLabel: UILabel!
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var firstLastnameLabel: UILabel!
@@ -46,7 +47,7 @@ class ViewController: UITableViewController, IDValidationDelegate {
     }
     
     @IBAction func didValidateIdTouchUpInside(_ sender: Any) {
-        TUID.instantiateIDAuth(delegate: self, context: self, apikey: "You-Api-Key", method: .INE, showResults: false, validateOptions: IDValidateOptions(checkInfo: true, checkQuality: true, checkPatterns: true, checkCurp: true, checkFace: true))
+        TUID.instantiateIDAuth(delegate: self, context: self, apikey: "You-api-key", method: .INE, showResults: false, validateOptions: IDValidateOptions(checkInfo: true, checkQuality: true, checkPatterns: true, checkCurp: true, checkFace: true))
     }
     
     // MARK - IDAuthDelegate
@@ -65,7 +66,7 @@ class ViewController: UITableViewController, IDValidationDelegate {
             
             sexLabel.text = ocrINE.sex
             birthdayLabel.text = ocrINE.dob
-            yearsOldLabel.text = "No present"
+//            yearsOldLabel.text = "No present"
             
             INEKeyLabel.text = ocrINE.claveElector
             folioLabel.text = "No present"
@@ -87,7 +88,7 @@ class ViewController: UITableViewController, IDValidationDelegate {
             
             sexLabel.text = ocrINE.sex
             birthdayLabel.text = ocrINE.dob
-            yearsOldLabel.text = ocrINE.edad
+//            yearsOldLabel.text = ocrINE.edad
             
             INEKeyLabel.text = ocrINE.claveElector
             folioLabel.text = ocrINE.folio
@@ -112,7 +113,7 @@ class ViewController: UITableViewController, IDValidationDelegate {
         
         sexLabel.text = data.validation.data.sex
         birthdayLabel.text = data.validation.data.dateOfBirth
-        yearsOldLabel.text = "deprecated"
+//        yearsOldLabel.text = ""
         curpLabel.text = data.validation.data.curp
         
         INEKeyLabel.text = data.validation.data.electoralId
@@ -123,10 +124,19 @@ class ViewController: UITableViewController, IDValidationDelegate {
         mz2Label.text = data.validation.data.mz2
         mz3Label.text = data.validation.data.mz3
         expirationDateLabel.text = data.validation.data.expirationDate
+        
+        var msgText = ""
+        for warning in data.validation.warnings {
+            msgText.append(warning.code)
+            msgText.append("|")
+            msgText.append(warning.message)
+        }
+        msgLabel.text = msgText
     }
     
     func error(response: String) {
         print("On Error response")
-        print(response) 
+        print(response)
+        msgLabel.text = response
     }
 }

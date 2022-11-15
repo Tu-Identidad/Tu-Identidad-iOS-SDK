@@ -39,8 +39,8 @@ public class UploadHelper{
         queue.async {
             AF.upload(multipartFormData: {
                     multipartFormData in
-                    multipartFormData.append(ineFData, withName: "FrontFile", fileName: "FrontFile", mimeType: "application/octet-stream")
-                    multipartFormData.append(ineBData, withName: "BackFile", fileName: "BackFile", mimeType: "application/octet-stream")
+                    multipartFormData.append(ineFData, withName: "FrontFile", fileName: "FrontFile", mimeType: "image/png")
+                    multipartFormData.append(ineBData, withName: "BackFile", fileName: "BackFile", mimeType: "image/png")
             }, to: uri , method: .post, headers: headers)
             .uploadProgress{ progress in
                 let p = progress.fractionCompleted
