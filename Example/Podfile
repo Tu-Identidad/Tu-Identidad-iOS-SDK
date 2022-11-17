@@ -5,6 +5,7 @@ target 'TuIdentidadSDK_Example' do
   use_frameworks!
   
   pod 'TuIdentidadSDK', :path => '../'
+  pod 'TuIdentidadSDK/AddressKit', :path => '../'
   
   target 'TuIdentidadSDK_Tests' do
     inherit! :search_paths
