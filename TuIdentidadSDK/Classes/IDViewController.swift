@@ -8,6 +8,7 @@
 import UIKit
 import MBDocCapture
 import JGProgressHUD
+import Alamofire
 
 public class IDViewController: UIViewController, ImageScannerControllerDelegate, UINavigationControllerDelegate,UIImagePickerControllerDelegate {
     var delegate: IDValidationDelegate?
@@ -26,6 +27,7 @@ public class IDViewController: UIViewController, ImageScannerControllerDelegate,
     public var apikey: String!
     public var showResults: Bool! = true
     public var validateOptions: IDValidateOptions!
+    
     public init () {
         let bundle = Bundle(for: IDViewController.self)
         let bundleURL = bundle.resourceURL?.appendingPathComponent("TuIdentidadSDK.bundle")
@@ -36,7 +38,6 @@ public class IDViewController: UIViewController, ImageScannerControllerDelegate,
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-   
 
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,90 +47,62 @@ public class IDViewController: UIViewController, ImageScannerControllerDelegate,
            // Fallback on earlier versions
         }
     }
-
-    public override func viewWillAppear(_ animated: Bool) {
-        NotificationCenter.default.addObserver(self, selector: #selector(onUserAction(_:)), name: Notification.Name(rawValue:   UploadHelper.u_r), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(onUserAction(_:)), name: Notification.Name(rawValue: UploadHelper.t_r), object: nil)
-    }
-   
-    public override func viewWillDisappear(_ animated: Bool) {
-        NotificationCenter.default.removeObserver(self)
-    }
-   
-    @objc func onUserAction(_ notification: Notification){
-       
-        let userinfo = notification.userInfo
-        if(!(userinfo?.isEmpty)!){
-            if let type = userinfo!["type"] as? ProgressType{
-                
-                switch type {
-                case .INE_U_P:
-                    let p = (userinfo!["progress"] as? Double)!
-                    let mhud = self.view.incrementHUD(hud, progress: Float(p))
-                    if mhud != nil{
-                       hud = mhud
-                    }
-                    break
-                case .INE_D_P:
-                    self.view.stopHUD(hud: hud, afterDelay: 0.01)
-                    break
-                case .INE_RESPONSE:
-                    self.view.stopHUD(hud: hud, afterDelay: 0.01)
-                    if let response = userinfo!["response"] as? IDValidation {
-//                        if showResults {
-//                            LauncherHelper().DisplayResults(sbName: "Main", sbIdentifier: "resultsID", userinfo: response.validation.description, context: self)
-//                        }
-                        delegate?.getData(data: response)
-                    } else if let response = userinfo!["response"] as? IDValidationINE {
-//                        if showResults {
-//                            LauncherHelper().DisplayResults(sbName: "Main", sbIdentifier: "resultsID", userinfo: response.validation.description, context: self)
-//                        }
-                        delegate?.getINEData(data: response)
-                        
-                    }
-                    self.dismiss(animated: true, completion: nil)
-                    break
-                case .INE_RESPONSE_ERROR:
-                    self.view.stopHUD(hud: hud, afterDelay: 0.01)
-                    if let response = userinfo!["response"] as? String {
-                        delegate?.error(response: response)
-                    }
-                    self.dismiss(animated: true, completion: nil)
-                case .THUMB_U_P:
-        
-                    break
-                case .THUMB_D_P:
-                   
-                    break
-                case .THUMB_RESPONSE:
-                   
-                    break
-                }
-            }
-        }
-    }
+    
     @IBAction func ineFrontScan(_ sender: Any) {
         scan(side: .Front)
     }
+    
     @IBAction func ineBackScan(_ sender: Any) {
         scan(side: .Back)
     }
+    
+    /// Handle ui validate action button
+    /// - Parameter sender: UIButton
     @IBAction func validateIne(_ sender: Any) {
-        if ineFront != nil && ineBack != nil{
-            
+        if ineFront != nil && ineBack != nil {
+            // Compress images
             if let ineFrontCompress = ineFront.jpegData(compressionQuality: 0.5), let ineBackCompress = ineBack.jpegData(compressionQuality: 0.5){
+                hud = self.view.showLoadingHUD()
                 UploadHelper.sendINE(ineFront: ineFrontCompress, ineBack: ineBackCompress, api: self.apikey, m: self.method, p: validateOptions)
-            }else{
-                print("Error en la compresión") 
+                    .uploadProgress{ [self] progress in
+                        let mhud = self.view.incrementHUD(hud, progress: Float(progress.fractionCompleted))
+                        if mhud != nil{
+                           hud = mhud
+                        }
+                    }.responseDecodable(of: IDValidationINEResponse.self){ [self] response in
+                        self.view.stopHUD(hud: hud, afterDelay: 0.01)
+                        switch response.result {
+                        case .success:
+                            delegate?.getINEData(data: IDValidationINE(validation: response.value!, ineFront: ineFrontCompress, ineBack: ineBackCompress))
+                        case .failure(_):
+                            var responseData = "{ code: 'server_error', message: 'Connection error, validators server is not available please try again later.' }"
+                            if let data = response.data {
+                                if let stringData = String(data: data, encoding: String.Encoding.utf8) {
+                                    responseData = stringData
+                                }
+                            }
+                            delegate?.error(response: responseData)
+                        }
+                        self.dismiss(animated: true, completion: nil)
+                    }
+            } else {
+                NSLog("TuIdentidadSDK: error when compressing images")
+                delegate?.error(response: "error when compressing images")
+                self.dismiss(animated: true, completion: nil)
             }
-            hud = self.view.showLoadingHUD()
-           
-        }else{
-            if !ineFrontCaptured{
-                print("No has capturado el ineFront")
-            } else if !ineBackCaptured{
-                print("No has capturado el ineBack")
+        } else {
+            // TODO: Localized string
+            var message = "Captura el reverso de tu identificación."
+            if ineFront == nil {
+                // TODO: Localized string
+                message = "Captura el frente de tu identificación."
             }
+            // Show Alert Controller
+            // TODO: Localized string
+            let alertController = UIAlertController(title: "Captura de imagen", message: message, preferredStyle: .alert)
+            // TODO: Localized string
+            alertController.addAction(UIAlertAction(title: NSLocalizedString("Aceptar", comment: "Default action"), style: .default))
+            self.present(alertController, animated: true, completion: nil)
         }
     }
     
@@ -187,13 +160,14 @@ public class IDViewController: UIViewController, ImageScannerControllerDelegate,
         }))
         present(actionsheet, animated: true)
     }
+    
     public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
         self.dismiss(animated: true, completion:nil)
         let vcScanner = ImageScannerController(image: image, delegate: self)
         self.present(vcScanner, animated: true, completion: nil)
     }
-   }
+}
 
     
     

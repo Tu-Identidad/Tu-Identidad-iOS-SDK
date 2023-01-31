@@ -11,10 +11,9 @@ import Alamofire
 
 public class UploadHelper{
     
-    public static let u_r = "UPLOAD_REQUEST"
     public static let t_r = "THUMBNAIL_REQUEST"
     
-    public static func sendINE(ineFront: Data, ineBack: Data, api: String, m: Methods, p: IDValidateOptions){
+    public static func sendINE(ineFront: Data, ineBack: Data, api: String, m: Methods, p: IDValidateOptions) -> UploadRequest {
         var uri = Paths.baseURL!
         let ineFPath = Util.saveImageFile(filename: "ineFront.png", data: ineFront)!
         let ineBPath = Util.saveImageFile(filename: "ineBack.png", data: ineBack)!
@@ -33,65 +32,18 @@ public class UploadHelper{
         }
         let headers: HTTPHeaders = [
             "ApiKey": api,
-            "Content-type":"multipart/form-data"
+            "Content-type":"multipart/form-data",
+            "Accept": "application/json"
         ]
-        let queue = DispatchQueue.main
-        queue.async {
-            AF.upload(multipartFormData: {
+
+        return AF.upload(multipartFormData: {
                     multipartFormData in
                     multipartFormData.append(ineFData, withName: "FrontFile", fileName: "FrontFile", mimeType: "image/png")
                     multipartFormData.append(ineBData, withName: "BackFile", fileName: "BackFile", mimeType: "image/png")
             }, to: uri , method: .post, headers: headers)
-            .uploadProgress{ progress in
-                let p = progress.fractionCompleted
-                NotificationCenter.default.post(name: Notification.Name(self.u_r), object: self, userInfo: [
-                    "type": ProgressType.INE_U_P,
-                    "progress": p
-                ])
-            }.downloadProgress { progress in
-                let p = progress.fractionCompleted
-                NotificationCenter.default.post(name: Notification.Name(self.u_r), object: self, userInfo: [
-                    "type": ProgressType.INE_D_P,
-                    "progress": p
-                ])
-            }.responseDecodable { (response: AFDataResponse<IDValidationINEResponse>) in
-                if let validationData = response.value {
-                    let validation = IDValidationINE(validation: validationData, ineFront: ineFData, ineBack: ineBData)
-                    NotificationCenter.default.post(name: Notification.Name(self.u_r), object: self, userInfo: [
-                        "type": ProgressType.INE_RESPONSE,
-                        "response": validation
-                    ])
-                }
-            }.responseDecodable { (response: AFDataResponse<IDValidationData>) in
-                if let validationData = response.value {
-                    let validation = IDValidation(validation: validationData, ineFront: ineFData, ineBack: ineBData)
-                    NotificationCenter.default.post(name: Notification.Name(self.u_r), object: self, userInfo: [
-                        "type": ProgressType.INE_RESPONSE,
-                        "response": validation
-                    ])
-                }
-            }.responseDecodable { (response: AFDataResponse<IDValidationResponse>) in
-                if let validation = response.value?.result {
-                    NotificationCenter.default.post(name: Notification.Name(self.u_r), object: self, userInfo: [
-                        "type": ProgressType.INE_RESPONSE,
-                        "response": validation
-                    ])
-                }
-            }.response { (response: AFDataResponse<Data?>) in
-                
-                var responseData = "{ code: 'server_error', message: 'Connection error, validators server is not available please try again later.' }"
-                if let data = response.data {
-                    if let stringData = String(data: data, encoding: String.Encoding.utf8) {
-                        responseData = stringData
-                    }
-                }
-                NotificationCenter.default.post(name: Notification.Name(self.u_r), object: self, userInfo: [
-                    "type": ProgressType.INE_RESPONSE_ERROR,
-                    "response": responseData
-                ])
-            }
-        }
+            .validate(statusCode: 200..<300)
     }
+    
     public static func getThumbnail(ineFront: UIImage){
         let uri = Paths.mobileBaseURL! + Paths.prefix.analize!
         let ineFPath = Util.saveImageFile(filename: "ineFront.png", image: ineFront)!
@@ -132,10 +84,11 @@ public class UploadHelper{
         }
     }
 }
+
 public class MyRequestInterceptor: RequestInterceptor {
     public func adapt(_ urlRequest: URLRequest, for session: Session, completion: @escaping (Result<URLRequest, Error>) -> Void) {
         var urlRequest = urlRequest
-        urlRequest.timeoutInterval = 15
+        urlRequest.timeoutInterval = 25
         completion(.success(urlRequest))
     }
 }
