@@ -116,6 +116,8 @@ public class IDValidationINEResponse: Decodable {
     public var front: IDSideResult
     public var back: IDSideResult
     public var data: IDINEData
+    public var curpData: IDCURPData
+    public var nominalListData: IDNominalListData
     public var warnings: [IDINEWarning]
     
     var description: String {
@@ -128,6 +130,8 @@ public class IDValidationResult: Decodable {
     public var quality: Bool!
     public var curp: Bool!
     public var pattern: Bool!
+    public var face: Bool!
+    public var nominalListCheck: Bool!
 }
 
 public class IDSideResult: Decodable {
@@ -153,6 +157,42 @@ public class IDINEData: Decodable {
     public var mz2: String!
     public var mz3: String!
     public var expirationDate: String!
+}
+
+public class IDCURPData: Decodable {
+    public var curp: String!
+    public var names: String!
+    public var lastname: String!
+    public var secondlastname: String!
+    public var sex: String!
+    public var dateofbirth: String!
+    public var nationality: String!
+    public var entity: String!
+    public var crip: String!
+    public var statusCurp: String!
+    public var folio: String!
+    public var probationaryDocument: String!
+    public var foreignerNumber: String!
+    public var registrationEntity: String!
+    public var tome: String!
+    public var municipalityRegistryKey: String!
+    public var yearOfregistry: String!
+    public var registryEntityKey: String!
+    public var page: String!
+    public var actNumber: String!
+    public var book: String!
+ }
+
+public class IDNominalListData: Decodable {
+    public var canVote: Bool!
+    public var type: String!
+    public var electorCode: String!
+    public var cicNumber: String!
+    public var issueNumber: String!
+    public var issueYear: String!
+    public var registrationYear: String!
+    public var ocrNumber: String!
+    public var expDate: String!
 }
 
 public class IDINEWarning: Decodable {
